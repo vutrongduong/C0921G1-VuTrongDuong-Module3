@@ -10,12 +10,13 @@ CREATE TABLE product (
     pName VARCHAR(45),
     pPrice INT
 );
-create table `order`(
-oID int primary key,
-cID int ,
-foreign key(cId) references customer(cID),
-oDate date,
-oTotalPrice int
+CREATE TABLE `order` (
+    oID INT PRIMARY KEY,
+    cID INT,
+    FOREIGN KEY (cId)
+        REFERENCES customer (cID),
+    oDate DATE,
+    oTotalPrice INT
 );
 CREATE TABLE order_detail (
     oID INT,
@@ -24,5 +25,6 @@ CREATE TABLE order_detail (
     FOREIGN KEY (oID)
         REFERENCES `order` (oID),
     FOREIGN KEY (pID)
-        REFERENCES product (pID)
+        REFERENCES product (pID),
+    odQTY INT
 );
