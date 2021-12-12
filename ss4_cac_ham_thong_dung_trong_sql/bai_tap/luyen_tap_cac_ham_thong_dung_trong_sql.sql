@@ -25,10 +25,10 @@ WHERE
                 FROM
                     mark));
 -- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần       
-SELECT *,AVG(mark.Mark) diem_trun_binh
+SELECT *,AVG(ifnull(mark.Mark,0)) diem_trun_binh
 FROM
     student
-        JOIN
+        left JOIN
     mark ON mark.StudentId = student.StudentId
 GROUP BY mark.StudentId
 ORDER BY Mark DESC;
