@@ -1,11 +1,11 @@
 create database furama ;
 CREATE TABLE furama.vi_tri (
-    ma_vi_tri INT NOT NULL PRIMARY KEY,
-    ten_vi_tri VARCHAR(45) NOT NULL
+    ma_vi_tri INT PRIMARY KEY,
+    ten_vi_tri VARCHAR(45)
 );
 CREATE TABLE furama.trinh_do (
-    ma_trinh_do INT NOT NULL PRIMARY KEY,
-    ten_trinh_do VARCHAR(45) NOT NULL
+    ma_trinh_do INT PRIMARY KEY,
+    ten_trinh_do VARCHAR(45)
 );
 CREATE TABLE furama.bo_phan (
     ma_bo_phan INT PRIMARY KEY,
