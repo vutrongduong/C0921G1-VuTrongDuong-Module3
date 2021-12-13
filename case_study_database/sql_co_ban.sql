@@ -1,12 +1,13 @@
 use furama;
--- 2.Hiển thị thông tin của tất cả nhân viên có trong hệ thống có tên bắt đầu là một trong các ký tự “H”, “T” hoặc “K” và có tối đa 15 kí tự
+-- 2.Hiển thị thông tin của tất cả nhân viên có trong hệ thống có tên 
+-- bắt đầu là một trong các ký tự “H”, “T” hoặc “K” và có tối đa 15 kí tự
 SELECT 
     *
 FROM
     nhan_vien
 WHERE
     (ho_va_ten RLIKE '^[HTK]')
-        AND (LENGTH(ho_va_ten) <= 16)tuổi từ 18 đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”
+        AND (CHAR_LENGTH(ho_va_ten) <= 15);
 SELECT 
     *
 FROM
@@ -149,6 +150,97 @@ ORDER BY MONTH(ngay_lam_hop_dong);
 -- 10.Hiển thị thông tin tương ứng với từng hợp đồng thì đã sử dụng bao nhiêu dịch vụ đi kèm.
 -- Kết quả hiển thị bao gồm ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, so_luong_dich_vu_di_kem 
 -- (được tính dựa trên việc sum so_luong ở dich_vu_di_kem)
+SELECT 
+    hop_dong.ma_hop_dong,
+    ngay_lam_hop_dong,
+    ngay_ket_thuc,
+    tien_dat_coc,
+    SUM(IFNULL(so_luong, 0)) so_luong_dich_vu_di_kem
+FROM
+    hop_dong
+        LEFT JOIN
+    hop_dong_chi_tiet ON hop_dong_chi_tiet.ma_hop_dong = hop_dong.ma_hop_dong
+GROUP BY ma_hop_dong;
+-- 11.Hiển thị thông tin các dịch vụ đi kèm đã được sử dụng bởi những khách hàng có 
+-- ten_loai_khach là “Diamond” và có dia_chi ở “Vinh” hoặc “Quảng Ngãi”.
+SELECT 
+    dvdk.ma_dich_vu_di_kem,
+    dvdk.ten_dich_vu_di_kem
+FROM
+    dich_vu_di_kem dvdk
+        JOIN
+    hop_dong_chi_tiet hdct ON hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
+        JOIN
+    hop_dong hd ON hdct.ma_hop_dong = hd.ma_hop_dong
+        JOIN
+    khach_hang kh ON kh.ma_khach_hang = hd.ma_khach_hang
+        JOIN
+    loai_khach lk ON lk.ma_loai_khach = kh.ma_loai_khach
+WHERE
+    ten_loai_khach = 'Diamond'
+        AND (dia_chi LIKE '%Vinh'
+        OR dia_chi LIKE '%Quảng Ngãi');
+-- 12.Hiển thị thông tin ma_hop_dong, ho_ten (nhân viên), ho_ten (khách hàng), so_dien_thoai (khách hàng),
+-- ten_dich_vu, so_luong_dich_vu_di_kem (được tính dựa trên việc sum so_luong ở dich_vu_di_kem),
+-- tien_dat_coc của tất cả các dịch vụ đã từng được khách hàng đặt vào 3 tháng cuối năm 2020 
+-- nhưng chưa từng được khách hàng đặt vào 6 tháng đầu năm 2021.
+SELECT 
+    hd.ma_hop_dong,
+   nv.ho_va_ten,
+    kh.ho_va_ten,
+    kh.so_dien_thoai,
+    dv.ma_dich_vu,
+    dv.ten_dich_vu,
+    SUM(ifnull(hdct.so_luong,0)) so_luong_dich_vu_di_kem,
+    tien_dat_coc
+FROM
+    hop_dong hd
+  JOIN
+   nhan_vien nv ON hd.ma_nhan_vien = nv.ma_nhan_vien
+        JOIN
+    khach_hang kh ON kh.ma_khach_hang = hd.ma_khach_hang
+        JOIN
+    dich_vu dv ON hd.ma_dich_vu = dv.ma_dich_vu 
+    
+      left join
+    hop_dong_chi_tiet hdct ON hdct.ma_hop_dong = hd.ma_hop_dong
+WHERE
+   hd.ma_hop_dong IN (SELECT 
+            ma_hop_dong
+        FROM
+            hop_dong
+        WHERE
+            (MONTH(ngay_lam_hop_dong) BETWEEN 10 AND 12)
+                AND YEAR(ngay_lam_hop_dong) = 2020)
+        AND hd.ma_hop_dong NOT IN (SELECT 
+            ma_hop_dong
+        FROM
+            hop_dong
+        WHERE
+            (MONTH(ngay_lam_hop_dong) BETWEEN 1 AND 6)
+                AND YEAR(ngay_lam_hop_dong) = 2021)
+GROUP BY ma_hop_dong;
+-- 13.Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng. 
+-- (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
+SELECT 
+    dvdk.ma_dich_vu_di_kem, ten_dich_vu_di_kem, SUM(so_luong)
+FROM
+    dich_vu_di_kem dvdk
+        JOIN
+    hop_dong_chi_tiet hdct ON hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
+GROUP BY ma_dich_vu_di_kem 
+having sum(so_luong)>= all(select max(so_luong) from hop_dong_chi_tiet)
+    
+	
+
+                
+
+
+
+          
+
+
+
 
 
 
