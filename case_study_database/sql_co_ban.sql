@@ -228,6 +228,15 @@ group by ten_dich_vu_di_kem
 having count(dvdk.ma_dich_vu_di_kem)=1
 order by ma_hop_dong;
 -- 15.Hiển thi thông tin của tất cả nhân viên bao gồm ma_nhan_vien, ho_ten, ten_trinh_do, ten_bo_phan,so_dien_thoai, dia_chi mới chỉ lập được tối đa 3 hợp đồng từ năm 2020 đến 2021
+select nv.ma_nhan_vien,ho_va_ten,ten_trinh_do,ten_bo_phan,dia_chi
+from nhan_vien nv
+join trinh_do td on nv.ma_trinh_do=td.ma_trinh_do
+join bo_phan bp on nv.ma_bo_phan=bp.ma_bo_phan
+join vi_tri vt on vt.ma_vi_tri=nv.ma_vi_tri
+join hop_dong hd on hd.ma_nhan_vien=nv.ma_nhan_vien
+group by hd.ma_nhan_vien
+having count(hd.ma_nhan_vien)<=3
+-- 16.Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2019 đến năm 2021.
 
 
 
