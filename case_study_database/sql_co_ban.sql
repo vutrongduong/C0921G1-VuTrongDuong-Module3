@@ -6,8 +6,7 @@ FROM
     nhan_vien
 WHERE
     (ho_va_ten RLIKE '^[HTK]')
-        AND (LENGTH(ho_va_ten) <= 16);
--- 3.Hiển thị thông tin của tất cả khách hàng có độ tuổi từ 18 đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”
+        AND (LENGTH(ho_va_ten) <= 16)tuổi từ 18 đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”
 SELECT 
     *
 FROM
@@ -110,6 +109,56 @@ WHERE
         WHERE
             year(hop_dong.ngay_lam_hop_dong)=2021)
 GROUP BY dich_vu.ten_dich_vu;
+-- 8.	Hiển thị thông tin ho_ten khách hàng có trong hệ thống, với yêu cầu ho_ten không trùng nhau.
+-- Học viên sử dụng theo 3 cách khác nhau để thực hiện yêu cầu trên
+-- cách 1 
+SELECT DISTINCT
+    ho_va_ten
+FROM
+    khach_hang
+GROUP BY ho_va_ten;
+-- cách 2
+SELECT 
+    ho_va_ten
+FROM
+    khach_hang
+GROUP BY ho_va_ten;
+-- cách 3
+SELECT 
+    ho_va_ten
+FROM
+    khach_hang kh
+GROUP BY ho_va_ten
+HAVING COUNT(DISTINCT (ho_va_ten)) = 1;
+-- 9.	Thực hiện thống kê doanh thu theo tháng, nghĩa là tương ứng với mỗi tháng trong năm 2021 
+-- thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng.
+-- select month(ngay_lam_hop_dong) thang, count(ma_khach_hang) so_luong_khach_hang
+-- from hop_dong
+-- where year(ngay_lam_hop_dong)=2021 and month(ngay_lam_hop_dong) between 1 and 12
+-- group by ma_khach_hang
+-- order by month(ngay_lam_hop_dong)
+SELECT 
+    MONTH(ngay_lam_hop_dong) thang,
+    COUNT(MONTH(ngay_lam_hop_dong)) so_luong_khach_hang
+FROM
+    hop_dong
+WHERE
+    YEAR(ngay_lam_hop_dong) = 2021
+GROUP BY MONTH(ngay_lam_hop_dong)
+ORDER BY MONTH(ngay_lam_hop_dong);
+-- 10.Hiển thị thông tin tương ứng với từng hợp đồng thì đã sử dụng bao nhiêu dịch vụ đi kèm.
+-- Kết quả hiển thị bao gồm ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, so_luong_dich_vu_di_kem 
+-- (được tính dựa trên việc sum so_luong ở dich_vu_di_kem)
+
+
+
+
+
+
+    
+    
+    
+
 
 
         
