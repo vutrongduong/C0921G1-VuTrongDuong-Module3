@@ -35,4 +35,4 @@ FROM
     mark ON student.StudentId = mark.StudentId
         JOIN
     `subject` ON `subject`.SubId = mark.SubId
-ORDER BY Mark ASC
+ORDER BY Mark DESC , StudentName ASC;
