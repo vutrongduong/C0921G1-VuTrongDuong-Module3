@@ -13,10 +13,8 @@ SELECT
 FROM
    khach_hang
 WHERE
-    (ROUND(DATEDIFF(CURDATE(), khach_hang.ngay_sinh) / 365,
-            0) <= 50
-        AND ROUND(DATEDIFF(CURDATE(), khach_hang.ngay_sinh) / 365,
-            0) >= 18)
+    (ROUND(DATEDIFF(CURDATE(), khach_hang.ngay_sinh) / 365,0) <= 50
+        AND ROUND(DATEDIFF(CURDATE(), khach_hang.ngay_sinh) / 365,0) >= 18)
         AND ((khach_hang.dia_chi LIKE '%Đà Nẵng%')
         OR (khach_hang.dia_chi LIKE '%Quảng Trị%'));
 -- 4.Đếm xem tương ứng với mỗi khách hàng đã từng đặt phòng bao nhiêu lần.Kết quả hiển thị được sắp xếp tăng dần theo số lần đặt phòng của khách hàng.
@@ -34,7 +32,7 @@ FROM
 WHERE
     loai_khach.ma_loai_khach = 1
 GROUP BY khach_hang.ma_khach_hang
-order by   COUNT(hop_dong.ma_khach_hang);
+order by COUNT(hop_dong.ma_khach_hang);
 -- 5.Hiển thị ma_khach_hang, ho_ten, ten_loai_khach, ma_hop_dong, ten_dich_vu, ngay_lam_hop_dong, ngay_ket_thuc, tong_tien 
 -- (Với tổng tiền được tính theo công thức như sau: Chi Phí Thuê + Số Lượng * Giá, với Số Lượng và Giá là từ bảng dich_vu_di_kem,hop_dong_chi_tiet) 
 --  tất cả các khách hàng đã từng đặt phòng. (những khách hàng nào chưa từng đặt phòng cũng phải hiển thị ra)
@@ -122,12 +120,11 @@ FROM
     khach_hang
 GROUP BY ho_va_ten;
 -- cách 3
-SELECT 
-    ho_va_ten
-FROM
-    khach_hang kh
-GROUP BY ho_va_ten
-HAVING COUNT(DISTINCT (ho_va_ten)) = 1;
+select khach_hang.ho_va_ten
+from khach_hang
+union
+select khach_hang.ho_va_ten
+from khach_hang;
 -- 9.	Thực hiện thống kê doanh thu theo tháng, nghĩa là tương ứng với mỗi tháng trong năm 2021 thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng.
 SELECT 
     MONTH(ngay_lam_hop_dong) thang,
@@ -240,7 +237,7 @@ having (count(hd.ma_nhan_vien)<=3) ;
 -- 16.Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2019 đến năm 2021.
 delete 
 from nhan_vien nv
-where nv.ma_nhan_vien not in (select ma_nhan_vien from hop_dong where year(ngay_lam_hop_dong) between 2019 and 2021);
+where nv.ma_nhan_vien not in (select distinct ma_nhan_vien from hop_dong where year(ngay_lam_hop_dong) between 2019 and 2021);
 -- 17.Cập nhật thông tin những khách hàng có ten_loai_khach từ Platinum lên Diamond, chỉ cập nhật những khách hàng đã từng đặt phòng với.Tổng Tiền thanh toán trong năm 2021 là lớn hơn 10.000.000 VNĐ
 update khach_hang
 set ma_loai_khach=1
@@ -259,6 +256,7 @@ from khach_hang
 where ma_khach_hang in (select ma_khach_hang 
 from hop_dong
 where year(ngay_lam_hop_dong)<2021);
+SET FOREIGN_KEY_CHECKS=1;
 -- 19.Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi
 update dich_vu_di_kem
 set gia=gia*2

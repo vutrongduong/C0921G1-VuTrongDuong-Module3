@@ -18,6 +18,8 @@ insert into furama.nhan_vien values (1,'Nguyễn Văn An','1970-11-07','45623178
 (8,'Nguyễn Hà Đông','1989-09-03','234414123',9000000,'642123111','donghanguyen@gmail.com','111 Hùng Vương, Hà Nội',2,4,4),
 (9,'Tòng Hoang','1982-09-03','256781231',6000000,'245144444','hoangtong@gmail.com','213 Hàm Nghi, Đà Nẵng',2,4,4),
 (10,'Nguyễn Công Đạo','1994-01-08','755434343',8000000,'988767111','nguyencongdao12@gmail.com','6 Hoà Khánh, Đồng Nai',2,3,2);
+-- SET FOREIGN_KEY_CHECKS=0;
+-- delete nhan_vien from nhan_vien;
 insert into furama.loai_khach values (1,'Diamond'),
 (2,'Platinium'),
 (3,'Gold'),
@@ -33,6 +35,8 @@ insert into furama.khach_hang values (1,5,'Nguyễn Thị Hào','1970-11-07',0,'
 (8,3,'Nguyễn Thị Hào','1999-04-08',0,'965656433','763212345','haohao99@gmail.com','55 Nguyễn Văn Linh, Kon Tum'),	
 (9,1,'Trần Đại Danh','1994-07-01',1,'432341235','643343433','danhhai99@gmail.com','24 Lý Thường Kiệt, Quảng Ngãi'),	
 (10,2,'Nguyễn Tâm Đắc','1989-07-01',1,'344343432','987654321','dactam@gmail.com','22 Ngô Quyền, Đà Nẵng');
+-- SET FOREIGN_KEY_CHECKS=0;
+-- delete khach_hang from khach_hang;
 insert into furama.kieu_thue values (1,'year'),
 (2,'month'),
 (3,'day'),
@@ -40,12 +44,12 @@ insert into furama.kieu_thue values (1,'year'),
 insert into furama.loai_dich_vu values (1,'Villa'),
 (2,'House'),
 (3,'Room');
-insert into furama.dich_vu values (1,'Villa Beach Front',25000,10000000,10,3,1,'vip','Có hồ bơi',500,4),
-(2,'House Princess 01',14000,5000000,7,2,2,'vip','Có thêm bếp nướng',null,3),
-(3,'Room Twin 01',5000,1000000,2,4,3,'normal','Có tivi',null,null),
-(4,'Villa No Beach Front',22000,9000000,8,3,1,'normal','Có hồ bơi',300,3),
-(5,'House Princess 02',10000,4000000,5,3,2,'normal','Có thêm bếp nướng',null,2),
-(6,'Room Twin 02',3000,900000,2,4,3,'normal','Có tivi',null,null);
+insert into furama.dich_vu values (1,'Villa Beach Front',25000,1000000,10,3,1,'vip','Có hồ bơi',500,4),
+(2,'House Princess 01',14000,500000,7,2,2,'vip','Có thêm bếp nướng',null,3),
+(3,'Room Twin 01',5000,100000,2,4,3,'normal','Có tivi',null,null),
+(4,'Villa No Beach Front',22000,900000,8,3,1,'normal','Có hồ bơi',300,3),
+(5,'House Princess 02',10000,400000,5,3,2,'normal','Có thêm bếp nướng',null,2),
+(6,'Room Twin 02',3000,90000,2,4,3,'normal','Có tivi',null,null);
 select * from furama.dich_vu ;
 insert into furama.dich_vu_di_kem values (1,'Karaoke','10000','giờ','tiện nghi, hiện tại'),
 (2,'Thuê xe máy','10000','chiếc','hỏng 1 xe'),
@@ -73,7 +77,3 @@ insert into furama.hop_dong_chi_tiet values (1,2,4,5),
 (6,1,3,1),
 (7,1,2,2),
 (8,12,2,2);
-
-
-   
-  
