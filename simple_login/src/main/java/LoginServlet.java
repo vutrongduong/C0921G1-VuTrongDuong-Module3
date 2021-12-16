@@ -21,9 +21,9 @@ public class LoginServlet extends HttpServlet {
         } else {
             writer.println("<h1>Login Error</h1>");
         }
-
         writer.println("</html>");
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
     }
 }
