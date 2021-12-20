@@ -43,6 +43,23 @@ CREATE TABLE furama.khach_hang (
     email VARCHAR(45),
     dia_chi VARCHAR(45)
 );
+create table furama.nguoi_dung(
+username varchar(255) primary key,
+`password` varchar(255)
+);
+create table furama.vai_tro(
+ma_vai_tro int primary key,
+ten_vai_tro varchar(255)
+);
+CREATE TABLE furama.vai_tro_nguoi_dung (
+    ma_vai_tro INT,
+    username VARCHAR(255),
+    FOREIGN KEY (ma_vai_tro)
+        REFERENCES vai_tro (ma_vai_tro),
+    FOREIGN KEY (username)
+        REFERENCES nguoi_dung (username),
+    PRIMARY KEY (ma_vai_tro , username)
+);
 CREATE TABLE furama.nhan_vien (
     ma_nhan_vien INT PRIMARY KEY,
     ho_va_ten VARCHAR(45),
@@ -60,7 +77,10 @@ CREATE TABLE furama.nhan_vien (
         REFERENCES trinh_do (ma_trinh_do),
     ma_bo_phan INT,
     FOREIGN KEY (ma_bo_phan)
-        REFERENCES bo_phan (ma_bo_phan)
+        REFERENCES bo_phan (ma_bo_phan),
+    username VARCHAR(255),
+FOREIGN KEY (username)
+        REFERENCES nguoi_dung (username)
 );
 CREATE TABLE furama.dich_vu (
     ma_dich_vu INT PRIMARY KEY,
