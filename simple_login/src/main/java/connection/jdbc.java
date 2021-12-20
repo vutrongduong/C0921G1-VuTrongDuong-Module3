@@ -20,12 +20,12 @@ public class jdbc {
     }
 
     public static void main(String[] args) {
-//        Connection connection = getJDBCconnection("jdbc:mysql://localhost:3306/demo", "root", "12345678");
-//        if (connection != null){
-//            System.out.println("thành công");
-//        }else {
-//            System.out.println("thất bại");
-//        }
+        Connection connection = getJDBCconnection("jdbc:mysql://localhost:3306/demo", "root", "12345678");
+        if (connection != null){
+            System.out.println("thành công");
+        }else {
+            System.out.println("thất bại");
+        }
         try {
             // connnect to database 'testdb'
             Connection conn = getJDBCconnection("jdbc:mysql://localhost:3306/furama", "root", "12345678");

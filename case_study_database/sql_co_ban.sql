@@ -5,18 +5,11 @@ SELECT
 FROM
     nhan_vien
 WHERE
-    (ho_va_ten RLIKE '^[HTK]')
-        AND (CHAR_LENGTH(ho_va_ten) <= 15);
+    (ho_va_ten RLIKE '^[HTK]') AND (CHAR_LENGTH(ho_va_ten) <= 15);
 -- 3.Hiển thị thông tin của tất cả khách hàng có độ tuổi từ 18 đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”.        
-SELECT 
-    *
-FROM
-   khach_hang
-WHERE
-    (ROUND(DATEDIFF(CURDATE(), khach_hang.ngay_sinh) / 365,0) <= 50
-        AND ROUND(DATEDIFF(CURDATE(), khach_hang.ngay_sinh) / 365,0) >= 18)
-        AND ((khach_hang.dia_chi LIKE '%Đà Nẵng%')
-        OR (khach_hang.dia_chi LIKE '%Quảng Trị%'));
+SELECT * FROM khach_hang
+WHERE (ROUND(DATEDIFF(CURDATE(), khach_hang.ngay_sinh) / 365,0) between 18 and 50)
+	AND (khach_hang.dia_chi LIKE '%Đà Nẵng%'OR khach_hang.dia_chi LIKE '%Quảng Trị%');
 -- 4.Đếm xem tương ứng với mỗi khách hàng đã từng đặt phòng bao nhiêu lần.Kết quả hiển thị được sắp xếp tăng dần theo số lần đặt phòng của khách hàng.
 -- Chỉ đếm những khách hàng nào có Tên loại khách hàng là “Diamond”
 SELECT 
@@ -205,13 +198,10 @@ WHERE
                 AND YEAR(ngay_lam_hop_dong) = 2021)
 GROUP BY ma_hop_dong;
 -- 13.Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng. (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
-SELECT 
-    dvdk.ma_dich_vu_di_kem, ten_dich_vu_di_kem, SUM(so_luong)
-FROM
-    dich_vu_di_kem dvdk
-        JOIN
-    hop_dong_chi_tiet hdct ON hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
-GROUP BY ma_dich_vu_di_kem 
+select dvdk.ma_dich_vu_di_kem, ten_dich_vu_di_kem, SUM(so_luong)
+from dich_vu_di_kem dvdk
+join hop_dong_chi_tiet hdct on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
+group by ma_dich_vu_di_kem 
 having sum(so_luong)>= (select max(so_luong) from hop_dong_chi_tiet);
 -- 14.Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất.Thông tin hiển thị bao gồm ma_hop_dong, ten_loai_dich_vu, ten_dich_vu_di_kem, so_lan_su_dung 
 -- (được tính dựa trên việc count các ma_dich_vu_di_kem)
@@ -235,6 +225,7 @@ where year(hd.ngay_lam_hop_dong) between 2020 and 2021
 group by hd.ma_nhan_vien
 having (count(hd.ma_nhan_vien)<=3) ;
 -- 16.Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2019 đến năm 2021.
+SET FOREIGN_KEY_CHECKS=1;
 delete 
 from nhan_vien nv
 where nv.ma_nhan_vien not in (select distinct ma_nhan_vien from hop_dong where year(ngay_lam_hop_dong) between 2019 and 2021);
@@ -267,10 +258,10 @@ join hop_dong hd on hdct.ma_hop_dong=hd.ma_hop_dong
 where so_luong >=10 and year(hd.ngay_lam_hop_dong)=2020)as tmp);
 -- 20.Hiển thị thông tin của tất cả các nhân viên và khách hàng có trong hệ thống, thông tin hiển thị bao gồm id 
 -- (ma_nhan_vien, ma_khach_hang), ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi.
-select ma_nhan_vien id ,ho_va_ten, email, so_dien_thoai, ngay_sinh, dia_chi
+select ma_nhan_vien id ,ho_va_ten, email, so_dien_thoai, ngay_sinh, dia_chi , "1" as `type`
 from nhan_vien
 union all
-select ma_khach_hang id ,ho_va_ten, email, so_dien_thoai, ngay_sinh, dia_chi
+select ma_khach_hang id ,ho_va_ten, email, so_dien_thoai, ngay_sinh, dia_chi, "2" as `type`
 from khach_hang
 
 
