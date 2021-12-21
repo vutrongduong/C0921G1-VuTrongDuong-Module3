@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #menu {
+            height: 30px;
+            background-color: black;
+        }
+        ​
+        #menu li:hover {
+            background-color: red;
+        }
+        ​
+        #menu ul ul {
+            position: absolute;
+            left: 0;
+            padding: 0;
+            visibility: hidden;
+        }
+        ​
+        #menu ul li:hover ul {
+            visibility: visible;
+        }
+        ​
+        ​
+        #menu li{
+            list-style: none;
+            position: relative;
+            float: left;
+            width: 100px;
+            height: 30px;
+            background-color: black;
+            color: white;
+            padding: 0 20px ;
+            line-height: 29px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="menu">
+    <ul>
+        <li> Iphone
+            <ul>
+                <li>Iphone 13 Pro</li>
+                <li>Iphone 13</li>
+                <li>Iphone 12 Pro</li>
+                <li>Iphone 12</li>
+                <li>Iphone 5</li>
+            </ul>
+        </li>
+        <li> Samsung </li>
+        <li> Xiaomi </li>
+        <li> Huawei </li>
+        <li style="float: right"> Login </li>
+    </ul>
+</div>
+</body>
+</html>
