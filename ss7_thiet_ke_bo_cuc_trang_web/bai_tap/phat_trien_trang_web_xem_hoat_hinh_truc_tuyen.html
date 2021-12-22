@@ -3,8 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .row {
+            display: flex;
+        }
+
+        .menu {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            height: 40px;
+            background-color: lightgrey;
+            margin: 2px 0 8px;
+        }
+
+        .menu a {
+            color: #3a3b3c;
+            text-decoration: none;
+            font-weight: 600;
+            margin: auto 0;
+        }
+
+        .header-2 {
+            border-left: solid 1px #3a3b3c;
+            height: 10px;
+            margin: auto 5px;
+        }
+
+        .left {
+            padding-left: 27px;
+            background-color: #e2e5e9;
+            border: solid 5px white;
+        }
+
+        .left iframe {
+            margin: 10px;
+        }
+
+        .main {
+            text-align: center;
+            border: solid 5px white;
+        }
+
+        .video {
+            text-align: left;
+            margin-left: 50px;
+        }
+        .left-video{
+            margin: 20px 30px;
+            background-color: white;
+        }
+
+        .description {
+            text-align: left;
+            margin-left: 50px;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: lightgrey;
+            margin-top: 10px;
+        }
+
+        .footer h4 {
+            text-align: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 768px) {
+            [class*="col-"] {
+                width: 100%;
+                padding: 5px;
+            }
+
+            .row {
+                flex-wrap: wrap;
+            }
+        }
+
+        .cartoon {
+            background-color: red;
+            color: white;
+        }
+
+        .header {
+            background-color: lightgrey;
+            font-size: 20px;
+            height: 50px;
+            line-height: 0px;
+        }
+    </style>
 </head>
 <body>
+<div class="row">
+    <div class="col-12 header">
+        <h2>Phim<span class="cartoon">Hoạt Hình</span></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 menu">
+        <a href="#">Phim hoạt hình</a>
+        <div class="header-2"></div>
+        <a href="#">Phim hoạt hình yêu thích</a>
+        <div class="header-2"></div>
+        <a href="#">Nhân vật hoạt hình</a>
+        <div class="header-2"></div>
+        <a href="#">Góp ý</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4 left">
+        <div class="left-video">
+            <iframe width="90%" height="200" src="https://www.youtube.com/embed/0P6LKixnzoU"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <h4>Welcome đến với khách sạn Nobi</h4>
+            <h4>Channel Fun</h4>
+            <iframe width="90%" height="200" src="https://www.youtube.com/embed/3D6BWY82U50"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <h4>Welcome đến với khách sạn Nobi</h4>
+            <h4>Channel Fun</h4>
+            <iframe width="90%" height="200" src="https://www.youtube.com/embed/7VUiCMXGuvw"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <h4>Welcome đến với khách sạn Nobi</h4>
+            <h4>Channel Fun</h4>
+            <iframe width="90%" height="200" src="https://www.youtube.com/embed/54Pv2kRU4wQ"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <h4>Welcome đến với khách sạn Nobi</h4>
+            <h4>Channel Fun</h4>
+        </div>
+    </div>
+    <div class="col-8 main">
+        <iframe width="90%" height="500" src="https://www.youtube.com/embed/tstV3Aif5jI"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        <h2 class="video">[S2] We Bare Bears - Siêu Clip 13 - Hoạt Hình Chúng Tôi Đơn Giản Là Gấu</h2>
+        <p class="description">2.351.887 lượt xem21 thg 7, 2020 <br>
+            POPS Kids<br>
+            <br>
+            🎉Đăng ký POPS Kids Learn để tham gia các khóa học online tương tác với giảng viên ngay nhé <br>
+            👉 https://popskids.onelink.me/X36W/POPS...<br>
+        </p>
+    </div>
+</div>
 
+<footer>
+    <div class="row">
+        <div class="col-12 footer">
+            <h4>© 2021 - Thiết kế web bởi DuongVu</h4>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
