@@ -69,21 +69,8 @@
             content: "";
         }
 
-        /*li {*/
-        /*    list-style: none;*/
-        /*    background-color: black;*/
-        /*    position: relative;*/
-        /*    color: #d5d5d5;*/
-        /*    float: left;*/
-        /*    width: 100px;*/
-        /*    height: 50px;*/
-        /*    padding: 0 20px;*/
-        /*    line-height: 50px;*/
-        /*    font-size: 25px;*/
-        /*}*/
         img {
             position: relative;
-            width: 55px;
         }
 
         .header {
@@ -95,23 +82,30 @@
         }
 
         .col-3 {
-            background-color: #d5d5d5;
-            height: 739px
+            background-color: whitesmoke;
+            height: 1500px;
         }
+
 
         p {
 
             font-size: 23px;
         }
 
-        a {
-            line-height: 40px;
-            margin-left: 110px;
+        .left a {
+            color: #3a3b3c;
+            text-decoration: none;
+            font-weight: 600;
+            margin: auto 0;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-left: 40px;
         }
 
         .col-6 {
             padding: 40px 30px;
             line-height: 40px;
+            position: relative;
         }
 
         button {
@@ -124,6 +118,13 @@
             font-size: 16px;
         }
 
+        .ban-be p {
+            font-size: 15px;
+            font-weight: 200;
+            text-decoration: none;
+            padding-left: 30px;
+        }
+
         .row-1 {
             border-bottom: solid;
             padding-bottom: 50px;
@@ -134,28 +135,53 @@
             padding-top: 50px;
         }
 
-        .footer {
-            text-align: center;
-            background-color: #9d9d9d;
-            color: white;
+
+        .left {
+            padding: 50px;
+        }
+
+        .ban-be {
+            padding-top: 200px;
+        }
+
+        .icoin {
+            padding-left: 250px
+        }
+
+        .logo {
+            width: 54px;
+        }
+
+        .bang-tin {
+            background-color: whitesmoke;
+            margin-bottom: 50px;
+            border-radius: 15px;
+        }
+
+        .bang-tin-1 {
+            background-color: whitesmoke;
+            border-radius: 15px;
+        }
+
+        .a {
+            padding: 40px;
+        }
+        .a:hover{
+            background-color: deepskyblue;
         }
 
 
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+
 </head>
 <body>
 <div class="row">
     <div class="col-12 header">
-        <!--        <li>Logo</li>-->
-        <!--        <li>Home</li>-->
-        <!--        <li>About</li>-->
-        <!--        <li>Projects</li>-->
-        <!--        <li>Contact</li>-->
-        <!--        <li style="float: right">Login</li>-->
         <div class="col-2">
-            <img src="logofb.png" class="col-2">
+            <img src="logofb.png" class="col-2 logo">
             <div class="col-5">
-                <input type="text" placeholder="Tìm kiếm trên FaceBook">
+                <input type="text" style="height: 30px;border-radius: 15px" placeholder="  Tìm kiếm trên FaceBook">
             </div>
         </div>
         <div class="icoin">
@@ -190,37 +216,49 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-3">
-        <p><a href="#">Link</a></p>
-        <p><a href="#">Link</a></p>
-        <p><a href="#">Link</a></p>
+    <div class="col-3 left">
+        <a href="#" style="border-bottom: blue solid 1px ; padding-left: 80px" class="col-12 a"><i class="fas fa-user-friends"></i>
+            Bạn bè</a>
+        <a href="#" style="border-bottom: blue solid 1px ; padding-left: 80px" class="col-12 a"><i class="fas fa-users"></i> Nhóm</a>
+        <a href="#" style="border-bottom: blue solid 1px ; padding-left: 80px" class="col-12 a"><i class="fas fa-gamepad"></i> Game</a>
+        <a href="#" style="border-bottom: blue solid 1px ; padding-left: 80px" class="col-12 a"><i class="far fa-bookmark"></i> Đã lưu</a>
+        <a href="#" style="border-bottom: blue solid 1px ; padding-left: 80px" class="col-12 a"><i class="fas fa-arrow-down"></i> Xem thêm</a>
+
     </div>
     <div class="col-6">
-        <div class="row-1">
+        <div class="col-12 bang-tin">
+            <input type="text" placeholder="   Dương ơi, bạn đang nghĩ gì" class="col-12" style="border-radius: 15px">
+            <p class="col-4">Video trực tiếp </p>
+            <p class="col-4" c>Ảnh/Video </p>
+            <p class="col-4">Cảm xúc/Hoạt động </p>
+        </div>
+        <div class="col-12 bang-tin-1">
             <h1>Welcome</h1>
-            <p style="font-size: 23px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex
-                ea
-                commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.</p>
-        </div>
-        <div class="row-2">
-            <h1>Test</h1>
-            <p>Lorem ispum...</p>
+            <h4>Deep Love Entertainment</h4>
+            <p style="font-size: 18px">Dòng chia sẻ của 'nhân vật tầm cỡ' cho rằng việc Sơn Tùng M-TP hay ai đó chỉnh
+                màu
+                tạp chí và đăng tải lại Instagram khi chưa được phép của đơn vị sở hữu tạp chí là điều rất cấm kỵ?<br>
+                Cre: TGSB</p>
+            <img src="fb.jpg" class="col-12">
+            <p></p>
         </div>
     </div>
-    <div class="col-3 ads">
-        <button>ADS</button>
-        <button>ADS</button>
+    <div class="col-3 right">
+        <div class="col-12 ban-be">
+            <h3>Người liên hệ</h3>
+            <p>Dai Nguyen <i class="fas fa-circle" style="float: right; color: blue"></i></p><br>
+            <p>Minh Vuong<i class="fas fa-circle" style="float: right;color: blue"></i></p><br>
+            <p>Hoa Nguyen<i class="fas fa-circle" style="float: right;color: blue"></i></p><br>
+            <p>Thanh Dung<i class="fas fa-circle" style="float: right;color: blue"></i></p><br>
+            <p>Hung Khanh<i class="fas fa-circle" style="float: right;color: blue"></i></p><br>
+            <p>Minh Bo<i class="fas fa-circle" style="float: right;color: blue"></i></p><br>
+            <p>Xin Trung<i class="fas fa-circle" style="float: right;color: blue"></i></p><br>
+            <p>Thai Van Truong<i class="fas fa-circle" style="float: right;color: blue"></i></p><br>
+            <p>Mai Hau<i class="fas fa-circle" style="float: right;color: blue"></i></p><br>
+            <p>Thao Phuong<i class="fas fa-circle" style="float: right;color: blue"></i></p><br>
+            <p>Dang Cong Anh<i class="fas fa-circle" style="float: right;color: blue"></i></p><br>
+        </div>
     </div>
-</div>
-<div class="col-12 footer">
-    <p>Footer Text</p>
 </div>
 </body>
 </html>
