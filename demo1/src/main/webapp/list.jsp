@@ -596,9 +596,10 @@
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
                                                                                              data-toggle="tooltip"
                                                                                              title="Edit">&#xE254;</i></a>
-                            <a data-target="#deleteEmployeeModal-${product.id}" class="delete" data-toggle="modal"><i class="material-icons"
-                                                                                                 data-toggle="tooltip"
-                                                                                                 title="Delete">&#xE872;</i></a>
+                            <a data-target="#deleteEmployeeModal-${product.id}" class="delete" data-toggle="modal"><i
+                                    class="material-icons"
+                                    data-toggle="tooltip"
+                                    title="Delete">&#xE872;</i></a>
                         </td>
                     </tr>
                     <div id="EmpdeleteloyeeModal-${product.id}" class="modal fade">
@@ -608,7 +609,6 @@
                                     <div class="modal-header">
                                         <h4 class="modal-title">Delete Employee</h4>
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                            &times;
                                         </button>
                                     </div>
                                     <div class="modal-body">
@@ -619,7 +619,8 @@
                                     <div class="modal-footer">
                                         <input type="button" class="btn btn-default" data-dismiss="modal"
                                                value="Cancel">
-                                        <a href="/product?action=delete&id=${product.id}" type="submit" class="btn btn-danger" value="Delete"></a>
+                                        <a href="/product?action=delete&id=${product.id}" type="submit"
+                                           class="btn btn-danger" value="Delete"></a>
                                     </div>
                                 </form>
                             </div>
