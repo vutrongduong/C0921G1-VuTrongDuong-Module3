@@ -9,8 +9,8 @@ import java.io.PrintWriter;
 @WebServlet(name = "CalculatorServlet",urlPatterns = "/calculate")
 public class CalculatorServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        float firstOperand = Integer.parseInt(request.getParameter("first-operand"));
-        float secondOperand = Integer.parseInt(request.getParameter("second-operand"));
+        float firstOperand = Integer.parseInt(request.getParameter("firstOperand"));
+        float secondOperand = Integer.parseInt(request.getParameter("secondOperand"));
         char operator = request.getParameter("operator").charAt(0);
 
         try {

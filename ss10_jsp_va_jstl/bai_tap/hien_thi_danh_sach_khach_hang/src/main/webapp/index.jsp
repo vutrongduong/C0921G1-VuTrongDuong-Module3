@@ -16,13 +16,13 @@
             <th>Địa chỉ</th>
             <th>Ảnh</th>
         </tr>
-        <c:forEach items="${list}" var="khach_hang">
+        <c:forEach items="${list}" var="khachHang">
             <tr>
-                <td>${khach_hang.ten}</td>
-                <td>${khach_hang.ngay_sinh}</td>
-                <td>${khach_hang.dia_chi}</td>
+                <td>${khachHang.ten}</td>
+                <td>${khachHang.ngay_sinh}</td>
+                <td>${khachHang.dia_chi}</td>
                 <td>
-                    <img src="${khach_hang.anh}"></td>
+                    <img src="${khachHang.anh}"></td>
             </tr>
         </c:forEach>
     </table>

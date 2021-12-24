@@ -8,12 +8,12 @@ import java.io.IOException;
 @WebServlet(name = "DiscountServlet", urlPatterns = "/discount")
 public class DiscountServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String list_price = request.getParameter("list_price");
-        String discount_percent = request.getParameter("discount_percent");
-        double discount_amount = Integer.parseInt(list_price) * Integer.parseInt(discount_percent) * 0.01;
-        double discount_price = Integer.parseInt(list_price) - discount_amount;
-        request.setAttribute("discount_amount", discount_amount);
-        request.setAttribute("discount_price", discount_price);
+        String listPrice = request.getParameter("listPrice");
+        String discountPercent = request.getParameter("discountPercent");
+        double discountAmount = Integer.parseInt(listPrice) * Integer.parseInt(discountPercent) * 0.01;
+        double discountPrice = Integer.parseInt(listPrice) - discountAmount;
+        request.setAttribute("discountAmount", discountAmount);
+        request.setAttribute("discountPrice", discountPrice);
         request.getRequestDispatcher("display.jsp").forward(request, response);
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

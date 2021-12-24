@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "KhachHangServlet",urlPatterns = "/khach_hang")
+@WebServlet(name = "KhachHangServlet",urlPatterns = "/khachHang")
 public class KhachHangServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

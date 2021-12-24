@@ -1,5 +1,6 @@
 <%@ page import="java.util.Map" %>
 <%@ page import="java.util.HashMap" %>
+<%@ page import="java.io.PrintWriter" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -17,11 +18,12 @@
     dic.put("computer", "Máy tính");
     String search = request.getParameter("search");
     String result = dic.get(search);
+    PrintWriter writer = response.getWriter();
     if (result != null) {
-        out.println("Word: " + search);
-        out.println("Result: " + result);
+        writer.println("Word: " + search);
+        writer.println("Result: " + result);
     } else {
-        out.println("Not found");
+        writer.println("Not found");
     }
 %>
 

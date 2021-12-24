@@ -14,13 +14,13 @@
   <form action="/discount" method="post">
   <ul>
     <li>
-      Product Description:<input type="text" name="product_description">
+      Product Description:<input type="text" name="productDescription">
     </li>
     <li>
-      List Price:<input type="text" name="list_price">
+      List Price:<input type="text" name="listPrice">
     </li>
     <li>
-      Discount Percent:<input type="text" name="discount_percent">
+      Discount Percent:<input type="text" name="discountPercent">
     </li>
   </ul>
   <input type="submit" value="Calculate Discount">
