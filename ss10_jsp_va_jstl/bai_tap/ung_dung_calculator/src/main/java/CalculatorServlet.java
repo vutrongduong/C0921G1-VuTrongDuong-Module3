@@ -18,14 +18,13 @@ public class CalculatorServlet extends HttpServlet {
             request.setAttribute("firstOperand",firstOperand);
             request.setAttribute("operator",operator);
             request.setAttribute("secondOperand",secondOperand);
-            request.setAttribute("result",result);
+            request.setAttribute("result",Float.toString(result));
             request.getRequestDispatcher("display.jsp").forward(request,response);
         } catch (Exception ex) {
-            request.setAttribute("error",("Error: " + ex.getMessage()));
+            request.setAttribute("result",("Error: " + ex.getMessage()));
             request.getRequestDispatcher("display.jsp").forward(request,response);
         }
     }
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }

@@ -6,15 +6,9 @@
 </head>
 <body>
 <h1>Result:</h1>
-<p>
-    <%=request.getAttribute("firstOperand")%>
-    <%=request.getAttribute("operator")%>
-    <%=request.getAttribute("secondOperand")%>=
-    <%=request.getAttribute("result")%>
-</p>
-<%--<c:if test="${er}" >--%>
-<%--    <h2><%=request.getAttribute("error")%></h2>--%>
-<%--</c:if>--%>
-<%--<h2><% if(request.getAttribute("error")==null) <%=request.getAttribute("error")%></h2>--%>
+<c:out value="${firstOperand}"/>
+<c:out value="${operator}"/>
+<c:out value="${secondOperand}"/>=
+<c:out value="${result}"/>
 </body>
 </html>
