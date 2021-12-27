@@ -1,36 +1,37 @@
 create database furama ;
-CREATE TABLE furama.vi_tri (
+use furama;
+CREATE TABLE vi_tri (
     ma_vi_tri INT PRIMARY KEY,
     ten_vi_tri VARCHAR(45)
 );
-CREATE TABLE furama.trinh_do (
+CREATE TABLE trinh_do (
     ma_trinh_do INT PRIMARY KEY,
     ten_trinh_do VARCHAR(45)
 );
-CREATE TABLE furama.bo_phan (
+CREATE TABLE bo_phan (
     ma_bo_phan INT PRIMARY KEY,
     ten_bo_phan VARCHAR(45)
 );
-CREATE TABLE furama.loai_khach (
+CREATE TABLE loai_khach (
     ma_loai_khach INT PRIMARY KEY,
     ten_loai_khach VARCHAR(45)
 );
-CREATE TABLE furama.loai_dich_vu (
+CREATE TABLE loai_dich_vu (
     ma_loai_dich_vu INT PRIMARY KEY,
     ten_loai_dich_vu VARCHAR(45)
 );
-CREATE TABLE furama.kieu_thue (
+CREATE TABLE kieu_thue (
     ma_kieu_thue INT PRIMARY KEY,
     ten_kieu_thue VARCHAR(45)
 );
-CREATE TABLE furama.dich_vu_di_kem (
+CREATE TABLE dich_vu_di_kem (
     ma_dich_vu_di_kem INT PRIMARY KEY,
     ten_dich_vu_di_kem VARCHAR(45),
     gia DOUBLE,
     don_vi VARCHAR(10),
     trang_thai VARCHAR(45)
 );
-CREATE TABLE furama.khach_hang (
+CREATE TABLE khach_hang (
     ma_khach_hang INT PRIMARY KEY,
     ma_loai_khach INT,
     FOREIGN KEY (ma_loai_khach)
@@ -43,24 +44,24 @@ CREATE TABLE furama.khach_hang (
     email VARCHAR(45),
     dia_chi VARCHAR(45)
 );
-create table furama.nguoi_dung(
+create table `user`(
 username varchar(255) primary key,
 `password` varchar(255)
 );
-create table furama.vai_tro(
+create table vai_tro(
 ma_vai_tro int primary key,
 ten_vai_tro varchar(255)
 );
-CREATE TABLE furama.vai_tro_nguoi_dung (
+CREATE TABLE vai_tro_nguoi_dung (
     ma_vai_tro INT,
     username VARCHAR(255),
     FOREIGN KEY (ma_vai_tro)
         REFERENCES vai_tro (ma_vai_tro),
     FOREIGN KEY (username)
-        REFERENCES nguoi_dung (username),
+        REFERENCES `user` (username),
     PRIMARY KEY (ma_vai_tro , username)
 );
-CREATE TABLE furama.nhan_vien (
+CREATE TABLE nhan_vien (
     ma_nhan_vien INT PRIMARY KEY,
     ho_va_ten VARCHAR(45),
     ngay_sinh DATE,
@@ -80,9 +81,9 @@ CREATE TABLE furama.nhan_vien (
         REFERENCES bo_phan (ma_bo_phan),
     username VARCHAR(255),
 FOREIGN KEY (username)
-        REFERENCES nguoi_dung (username)
+        REFERENCES `user` (username)
 );
-CREATE TABLE furama.dich_vu (
+CREATE TABLE dich_vu (
     ma_dich_vu INT PRIMARY KEY,
     ten_dich_vu VARCHAR(45),
     dien_tich INT,
@@ -99,7 +100,7 @@ CREATE TABLE furama.dich_vu (
     dien_tich_ho_boi DOUBLE,
     so_tang INT
 );
-CREATE TABLE furama.hop_dong (
+CREATE TABLE hop_dong (
     ma_hop_dong INT PRIMARY KEY,
     ngay_lam_hop_dong DATETIME,
     ngay_ket_thuc DATETIME,
@@ -114,7 +115,7 @@ CREATE TABLE furama.hop_dong (
     FOREIGN KEY (ma_dich_vu)
         REFERENCES dich_vu (ma_dich_vu)
 );
-CREATE TABLE furama.hop_dong_chi_tiet (
+CREATE TABLE hop_dong_chi_tiet (
     ma_hop_dong_chi_tiet INT PRIMARY KEY,
     ma_hop_dong INT,
     FOREIGN KEY (ma_hop_dong)

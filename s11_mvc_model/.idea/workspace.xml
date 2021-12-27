@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d287db1a-e56d-408f-a4cd-d6d7f9e3bdf7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/model/Booking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/model/Contract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/model/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/model/facility/Facility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/model/facility/House.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/model/facility/Room.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/model/facility/Villa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/service/BookingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/service/ContactService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/service/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/service/FacilityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/service/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/service/impl/BookingComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/service/impl/BookingServicelmpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/service/impl/Connect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/service/impl/FacilityServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/service/impl/PromotionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/webapp/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss9_tong_quan_ung_dung_web/.idea/ss9_tong_quan_ung_dung_web.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/main/java/controller/ProductServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/main/java/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/main/java/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/main/java/service/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_database/DDL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_database/DDL.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_database/DML.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_database/DML.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/bai_tap/tao_ung_dung_quan_ly_san_pham/controller/ProductServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/bai_tap/tao_ung_dung_quan_ly_san_pham/model/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/bai_tap/tao_ung_dung_quan_ly_san_pham/service/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/bai_tap/tao_ung_dung_quan_ly_san_pham/service/ProductServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/thuc_hanh/ung_dung_quan_ly_khach_hang/controller/CustomerServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/thuc_hanh/ung_dung_quan_ly_khach_hang/model/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/thuc_hanh/ung_dung_quan_ly_khach_hang/service/CustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/thuc_hanh/ung_dung_quan_ly_khach_hang/service/CustomerServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/s11_mvc_model-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai_tap/tao_ung_dung_quan_ly_san_pham/controller/ProductServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai_tap/tao_ung_dung_quan_ly_san_pham/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai_tap/tao_ung_dung_quan_ly_san_pham/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai_tap/tao_ung_dung_quan_ly_san_pham/service/ProductServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thuc_hanh/ung_dung_quan_ly_khach_hang/controller/CustomerServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thuc_hanh/ung_dung_quan_ly_khach_hang/model/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thuc_hanh/ung_dung_quan_ly_khach_hang/service/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thuc_hanh/ung_dung_quan_ly_khach_hang/service/CustomerServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bai_tap/error-404.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bai_tap/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bai_tap/product/create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bai_tap/product/delete.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bai_tap/product/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bai_tap/product/update.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bai_tap/product/view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/thuc_hanh/ung_dung_quan_ly_khach_hang/customer/create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/thuc_hanh/ung_dung_quan_ly_khach_hang/customer/delete.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/thuc_hanh/ung_dung_quan_ly_khach_hang/customer/edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/thuc_hanh/ung_dung_quan_ly_khach_hang/customer/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/thuc_hanh/ung_dung_quan_ly_khach_hang/customer/view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/thuc_hanh/ung_dung_quan_ly_khach_hang/error-404.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/thuc_hanh/ung_dung_quan_ly_khach_hang/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss7_thiet_ke_bo_cuc_trang_web/bai_tap/tao_layout_voi_rwd.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss7_thiet_ke_bo_cuc_trang_web/bai_tap/tao_layout_voi_rwd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss9_tong_quan_ung_dung_web/bai_tap/ung_dung_product_discount_calculator/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss9_tong_quan_ung_dung_web/bai_tap/ung_dung_product_discount_calculator/src/main/webapp/index.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jspx File" />
+        <option value="Jsp File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="22iRzQdbL22R8CYN6N5FfshiCj2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\codegym\C0921G1-VuTrongDuong-Module3\s11_mvc_model\src\main\webapp\bai_tap" />
+      <recent name="D:\codegym\C0921G1-VuTrongDuong-Module3\s11_mvc_model\src\main\webapp\bai_tap\product" />
+      <recent name="D:\codegym\C0921G1-VuTrongDuong-Module3\s11_mvc_model\src\main\webapp\thuc_hanh\ung_dung_quan_ly_khach_hang" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.56" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.56" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Gradle : org.example : s11_mvc_model-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_s11_mvc_model" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="58102" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : org.example : s11_mvc_model-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d287db1a-e56d-408f-a4cd-d6d7f9e3bdf7" name="Default Changelist" comment="" />
+      <created>1640318682442</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640318682442</updated>
+      <workItem from="1640318711516" duration="57000" />
+      <workItem from="1640318818125" duration="14000" />
+      <workItem from="1640318851424" duration="39000" />
+      <workItem from="1640318929912" duration="2846000" />
+      <workItem from="1640321885330" duration="1121000" />
+      <workItem from="1640326644819" duration="282000" />
+      <workItem from="1640327305633" duration="249000" />
+      <workItem from="1640327584282" duration="14000" />
+      <workItem from="1640327629431" duration="60000" />
+      <workItem from="1640327742013" duration="938000" />
+      <workItem from="1640329391341" duration="1950000" />
+      <workItem from="1640333147851" duration="434000" />
+      <workItem from="1640333738390" duration="1445000" />
+      <workItem from="1640335227154" duration="326000" />
+      <workItem from="1640335568416" duration="44000" />
+      <workItem from="1640336830609" duration="3943000" />
+      <workItem from="1640357135624" duration="4868000" />
+      <workItem from="1640499417048" duration="2193000" />
+      <workItem from="1640509439894" duration="33000" />
+      <workItem from="1640521402532" duration="155000" />
+      <workItem from="1640576894203" duration="597000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="312" y="246" key="#Template_Data_Languages" timestamp="1640367660066">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="312" y="246" key="#Template_Data_Languages/0.0.1536.824@0.0.1536.824" timestamp="1640367660066" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1640334769290">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1640334769290" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1640329439703">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1640329439703" />
+    <state x="499" y="51" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1640334749103">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="51" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1536.824@0.0.1536.824" timestamp="1640334749103" />
+    <state x="222" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1640577135561">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="222" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1640577135561" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1640577489655">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1640577489655" />
+    <state width="1242" height="171" key="GridCell.Tab.0.bottom" timestamp="1640577496675">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1242" height="171" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1640577496675" />
+    <state width="1242" height="171" key="GridCell.Tab.0.center" timestamp="1640577496674">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1242" height="171" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1640577496674" />
+    <state width="1242" height="171" key="GridCell.Tab.0.left" timestamp="1640577496674">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1242" height="171" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1640577496674" />
+    <state width="1242" height="171" key="GridCell.Tab.0.right" timestamp="1640577496674">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1242" height="171" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1640577496674" />
+    <state width="1242" height="171" key="GridCell.Tab.1.bottom" timestamp="1640577496675">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1242" height="171" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1640577496675" />
+    <state width="1242" height="171" key="GridCell.Tab.1.center" timestamp="1640577496675">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1242" height="171" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1640577496675" />
+    <state width="1242" height="171" key="GridCell.Tab.1.left" timestamp="1640577496675">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1242" height="171" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1640577496675" />
+    <state width="1242" height="171" key="GridCell.Tab.1.right" timestamp="1640577496675">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1242" height="171" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1640577496675" />
+    <state width="1242" height="171" key="GridCell.Tab.2.bottom" timestamp="1640577496675">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1242" height="171" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1640577496675" />
+    <state width="1242" height="171" key="GridCell.Tab.2.center" timestamp="1640577496675">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1242" height="171" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1640577496675" />
+    <state width="1242" height="171" key="GridCell.Tab.2.left" timestamp="1640577496675">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1242" height="171" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1640577496675" />
+    <state width="1242" height="171" key="GridCell.Tab.2.right" timestamp="1640577496675">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1242" height="171" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1640577496675" />
+    <state width="1242" height="171" key="GridCell.Tab.3.bottom" timestamp="1640366630131">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1242" height="171" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1640366630131" />
+    <state width="1242" height="171" key="GridCell.Tab.3.center" timestamp="1640366630131">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1242" height="171" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1640366630131" />
+    <state width="1242" height="171" key="GridCell.Tab.3.left" timestamp="1640366630130">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1242" height="171" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1640366630130" />
+    <state width="1242" height="171" key="GridCell.Tab.3.right" timestamp="1640366630131">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1242" height="171" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1640366630131" />
+    <state x="209" y="23" key="new project wizard" timestamp="1640577493336">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="23" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1640577493336" />
+  </component>
+</project>
