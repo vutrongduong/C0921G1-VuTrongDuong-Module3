@@ -1,5 +1,5 @@
 package repository;
 
-public interface EmployeeService extends Service {
+public interface EmployeeService  {
     void edit();
 }

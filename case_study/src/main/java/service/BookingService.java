@@ -6,7 +6,7 @@ import bean.Contract;
 import java.util.List;
 import java.util.Set;
 
-public interface BookingService extends Service {
+public interface BookingService {
     Set<Booking> convertRead();
 
     List<String> convertWrite();

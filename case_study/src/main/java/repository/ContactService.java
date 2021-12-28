@@ -1,6 +1,6 @@
 package repository;
 
-public interface ContactService extends Service {
+public interface ContactService  {
     void editConstracts();
 
     void displayContact();

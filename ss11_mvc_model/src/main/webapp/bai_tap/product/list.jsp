@@ -11,6 +11,13 @@
 </p>
 <table border="1">
     <tr>
+        <form method="post" action="/product?action=search">
+<%--            <input type="hidden" name="action" value="search">--%>
+            <input type="text" name="name" placeholder="search by name">
+            <input type="submit" value="Search">
+        </form>
+    </tr>
+    <tr>
         <td>ID</td>
         <td>Code</td>
         <td>Name</td>
@@ -19,7 +26,7 @@
         <td>Description</td>
         <td>Status</td>
     </tr>
-    <c:forEach items='${requestScope["products"]}' var="product">
+    <c:forEach items='${products}' var="product">
         <tr>
             <td><a href="/product?action=view&id=${product.id}">${product.id}</a></td>
             <td>${product.code}</td>

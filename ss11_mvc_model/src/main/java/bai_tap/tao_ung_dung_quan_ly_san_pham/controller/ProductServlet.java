@@ -1,6 +1,6 @@
 package bai_tap.tao_ung_dung_quan_ly_san_pham.controller;
 
-import bai_tap.tao_ung_dung_quan_ly_san_pham.model.Product;
+import bai_tap.tao_ung_dung_quan_ly_san_pham.bean.Product;
 import bai_tap.tao_ung_dung_quan_ly_san_pham.service.IProductService;
 import bai_tap.tao_ung_dung_quan_ly_san_pham.service.ProductServiceImpl;
 
@@ -31,6 +31,9 @@ public class ProductServlet extends HttpServlet {
                 break;
             case "delete":
                 deleteProduct(request, response);
+                break;
+            case "search":
+                search(request, response);
                 break;
             default:
                 break;
@@ -118,7 +121,7 @@ public class ProductServlet extends HttpServlet {
 
     private void showUpdateForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        Product product = productService.search(id);
+        Product product = productService.searchID(id);
         RequestDispatcher dispatcher;
         if (product == null) {
             dispatcher = request.getRequestDispatcher("bai_tap/error-404.jsp");
@@ -143,7 +146,7 @@ public class ProductServlet extends HttpServlet {
         int amount = Integer.parseInt(request.getParameter("amount"));
         String description = request.getParameter("description");
         String status = request.getParameter("status");
-        Product product = productService.search(id);
+        Product product = productService.searchID(id);
         RequestDispatcher dispatcher;
         if (product == null) {
             dispatcher = request.getRequestDispatcher("bai_tap/error-404.jsp");
@@ -170,7 +173,7 @@ public class ProductServlet extends HttpServlet {
 
     private void showDeleteForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        Product product = productService.search(id);
+        Product product = productService.searchID(id);
         RequestDispatcher dispatcher;
         if (product == null) {
             dispatcher = request.getRequestDispatcher("bai_tap/error-404.jsp");
@@ -189,7 +192,7 @@ public class ProductServlet extends HttpServlet {
 
     private void deleteProduct(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        Product product = this.productService.search(id);
+        Product product = this.productService.searchID(id);
         RequestDispatcher dispatcher;
         if (product == null) {
             dispatcher = request.getRequestDispatcher("bai_tap/error-404.jsp");
@@ -205,7 +208,7 @@ public class ProductServlet extends HttpServlet {
 
     private void viewProduct(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        Product product = productService.search(id);
+        Product product = productService.searchID(id);
         RequestDispatcher dispatcher;
         if (product == null) {
             dispatcher = request.getRequestDispatcher("bai_tap/error-404.jsp");
@@ -219,6 +222,17 @@ public class ProductServlet extends HttpServlet {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    private void search(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String name = request.getParameter("name");
+        List<Product> productList = productService.search(name);
+        if (productList == null) {
+            request.getRequestDispatcher("bai_tap/error-404.jsp");
+        } else {
+            request.setAttribute("products", productList);
+            request.getRequestDispatcher("bai_tap/product/list.jsp").forward(request, response);
         }
     }
 }

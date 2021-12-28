@@ -262,7 +262,11 @@ select ma_nhan_vien id ,ho_va_ten, email, so_dien_thoai, ngay_sinh, dia_chi , "1
 from nhan_vien
 union all
 select ma_khach_hang id ,ho_va_ten, email, so_dien_thoai, ngay_sinh, dia_chi, "2" as `type`
-from khach_hang
+from khach_hang;
+select ma_khach_hang,ten_loai_khach,ho_va_ten,gioi_tinh,so_cmnd,so_dien_thoai,email,dia_chi 
+from khach_hang 
+join loai_khach on ma_loai_khach.loai_khach=ma_loai_khach.khach_hang
+
 
 
 

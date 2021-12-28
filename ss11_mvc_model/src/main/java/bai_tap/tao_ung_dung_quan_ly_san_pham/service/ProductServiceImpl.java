@@ -1,6 +1,6 @@
 package bai_tap.tao_ung_dung_quan_ly_san_pham.service;
 
-import bai_tap.tao_ung_dung_quan_ly_san_pham.model.Product;
+import bai_tap.tao_ung_dung_quan_ly_san_pham.bean.Product;
 import bai_tap.tao_ung_dung_quan_ly_san_pham.repository.IProductRepository;
 import bai_tap.tao_ung_dung_quan_ly_san_pham.repository.ProductRepository;
 
@@ -30,7 +30,12 @@ public class ProductServiceImpl implements IProductService {
     }
 
     @Override
-    public Product search(int id) {
-        return productRepository.search(id);
+    public List<Product> search(String name) {
+        return productRepository.search(name);
+    }
+
+    @Override
+    public Product searchID(int id) {
+        return productRepository.searchID(id);
     }
 }

@@ -5,7 +5,7 @@ import bean.facility.Facility;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-public interface FacilityService extends Service {
+public interface FacilityService {
     void displayFacilityMaintenance();
 
     List<String> convertWriteFalicity(Facility facility);

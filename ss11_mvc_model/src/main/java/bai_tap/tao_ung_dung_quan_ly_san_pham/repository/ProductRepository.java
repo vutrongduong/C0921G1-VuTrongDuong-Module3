@@ -1,13 +1,13 @@
 package bai_tap.tao_ung_dung_quan_ly_san_pham.repository;
 
-import bai_tap.tao_ung_dung_quan_ly_san_pham.model.Product;
+import bai_tap.tao_ung_dung_quan_ly_san_pham.bean.Product;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ProductRepository implements IProductRepository{
+public class ProductRepository implements IProductRepository {
     static Map<Integer, Product> productMap = new HashMap<>();
 
     static {
@@ -38,7 +38,20 @@ public class ProductRepository implements IProductRepository{
     }
 
     @Override
-    public Product search(int id) {
+    public List<Product> search(String name) {
+        List<Product> productList = new ArrayList<>();
+        for (Product e : productMap.values()) {
+            System.out.println("okkee");
+            if (e.getName().toLowerCase().contains(name.toLowerCase())) {
+                System.out.println("oke");
+                productList.add(e);
+            }
+        }
+        return productList;
+    }
+
+    @Override
+    public Product searchID(int id) {
         return productMap.get(id);
     }
 }
