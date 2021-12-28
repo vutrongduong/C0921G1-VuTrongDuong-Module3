@@ -15,7 +15,7 @@
     </h2>
 </center>
 <div align="center">
-    <table border="1" cellpadding="5">
+    <table border="1" cellpadding="5" class="table">
         <caption><h2>List of Users</h2></caption>
         <tr>
             <td colspan="4">
@@ -56,15 +56,6 @@
             </tr>
         </c:forEach>
     </table>
-    <td class="text-center align-middle">
-        <div class="btn-group align-top">
-            <button class="btn btn-sm btn-outline-secondary badge" type="button"
-                    data-toggle="modal" data-target="#user-form-modal">Edit
-            </button>
-            <button class="btn btn-sm btn-outline-secondary badge"
-                    type="button"><i class="fa fa-trash"></i></button>
-        </div>
-    </td>
 </div>
 </body>
 </html>
