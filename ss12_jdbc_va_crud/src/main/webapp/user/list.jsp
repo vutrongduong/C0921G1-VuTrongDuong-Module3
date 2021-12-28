@@ -4,7 +4,9 @@
 <html>
 <head>
     <title>User Management Application</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
+
 <body>
 <center>
     <h1>User Management</h1>
@@ -40,13 +42,29 @@
                 <td><c:out value="${user.name}"/></td>
                 <td><c:out value="${user.email}"/></td>
                 <td><c:out value="${user.country}"/></td>
-                <td>
-                    <a href="/users?action=edit&id=${user.id}">Edit</a>
-                    <a href="/users?action=delete&id=${user.id}">Delete</a>
+                <td class="text-center align-middle">
+                    <div class="btn-group align-top">
+                        <button class="btn btn-sm btn-outline-secondary badge" type="button"
+                                data-toggle="modal" data-target="#user-form-modal"><a
+                                href="/users?action=edit&id=${user.id}">Edit</a>
+                        </button>
+                        <button class="btn btn-sm btn-outline-secondary badge"
+                                type="button"><a href="/users?action=delete&id=${user.id}"><i
+                                class="fa fa-trash"></i></a></button>
+                    </div>
                 </td>
             </tr>
         </c:forEach>
     </table>
+    <td class="text-center align-middle">
+        <div class="btn-group align-top">
+            <button class="btn btn-sm btn-outline-secondary badge" type="button"
+                    data-toggle="modal" data-target="#user-form-modal">Edit
+            </button>
+            <button class="btn btn-sm btn-outline-secondary badge"
+                    type="button"><i class="fa fa-trash"></i></button>
+        </div>
+    </td>
 </div>
 </body>
 </html>
