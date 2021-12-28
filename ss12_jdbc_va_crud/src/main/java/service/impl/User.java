@@ -44,4 +44,29 @@ public class User implements IUser {
     public List<bean.User> sort() throws SQLException {
         return userDAO.sort();
     }
+
+    @Override
+    public bean.User getUserById(int id) {
+        return userDAO.getUserById(id);
+    }
+
+    @Override
+    public void insertUserStore(bean.User user) throws SQLException {
+        userDAO.insertUserStore(user);
+    }
+
+    @Override
+    public void addUserTransaction(bean.User user, int[] permision) {
+        userDAO.addUserTransaction(user, permision);
+    }
+
+    @Override
+    public void insertUpdateWithoutTransaction() {
+        userDAO.insertUpdateWithoutTransaction();
+    }
+
+    @Override
+    public void insertUpdateUseTransaction() {
+        userDAO.insertUpdateUseTransaction();
+    }
 }

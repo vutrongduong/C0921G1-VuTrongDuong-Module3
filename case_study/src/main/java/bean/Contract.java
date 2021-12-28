@@ -1,73 +1,71 @@
 package bean;
 
 public class Contract {
-    private String soHopDong;
-    private String maBooking;
-    private double soTienCocTruoc;
-    private double tongSoTienThanhToan;
-    private String maKhachHang;
-
-    public Contract(String soHopDong, String maBooking,
-                    double soTienCocTruoc, double tongSoTienThanhToan, String maKhachHang) {
-        this.soHopDong = soHopDong;
-        this.maBooking = maBooking;
-        this.soTienCocTruoc = soTienCocTruoc;
-        this.tongSoTienThanhToan = tongSoTienThanhToan;
-        this.maKhachHang = maKhachHang;
-
-    }
+    int id;
+    String startDate;
+    String endDate;
+    double deposit;
+    double totalMoney;
 
     public Contract() {
     }
 
-    public String getSoHopDong() {
-        return soHopDong;
+    public Contract(int id, String startDate, String endDate, double deposit, double totalMoney) {
+        this.id = id;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.deposit = deposit;
+        this.totalMoney = totalMoney;
     }
 
-    public void setSoHopDong(String soHopDong) {
-        this.soHopDong = soHopDong;
+    public int getId() {
+        return id;
     }
 
-    public String getMaBooking() {
-        return maBooking;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setMaBooking(String maBooking) {
-        this.maBooking = maBooking;
+    public String getStartDate() {
+        return startDate;
     }
 
-    public double getSoTienCocTruoc() {
-        return soTienCocTruoc;
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
     }
 
-    public void setSoTienCocTruoc(double soTienCocTruoc) {
-        this.soTienCocTruoc = soTienCocTruoc;
+    public String getEndDate() {
+        return endDate;
     }
 
-    public double getTongSoTienThanhToan() {
-        return tongSoTienThanhToan;
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
     }
 
-    public void setTongSoTienThanhToan(double tongSoTienThanhToan) {
-        this.tongSoTienThanhToan = tongSoTienThanhToan;
+    public double getDeposit() {
+        return deposit;
     }
 
-    public String getMaKhachHang() {
-        return maKhachHang;
+    public void setDeposit(double deposit) {
+        this.deposit = deposit;
     }
 
-    public void setMaKhachHang(String maKhachHang) {
-        this.maKhachHang = maKhachHang;
+    public double getTotalMoney() {
+        return totalMoney;
+    }
+
+    public void setTotalMoney(double totalMoney) {
+        this.totalMoney = totalMoney;
     }
 
     @Override
     public String toString() {
         return "Contract{" +
-                "soHopDong='" + soHopDong + '\'' +
-                ", maBooking='" + maBooking + '\'' +
-                ", soTienCocTruoc=" + soTienCocTruoc +
-                ", tongSoTienThanhToan=" + tongSoTienThanhToan +
-                ", maKhachHang='" + maKhachHang + '\'' +
+                "id=" + id +
+                ", startDate='" + startDate + '\'' +
+                ", endDate='" + endDate + '\'' +
+                ", deposit=" + deposit +
+                ", totalMoney=" + totalMoney +
                 '}';
     }
 }

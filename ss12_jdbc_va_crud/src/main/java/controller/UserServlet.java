@@ -61,6 +61,15 @@ public class UserServlet extends HttpServlet {
                 case "sort":
                     sort(request, response);
                     break;
+                case "permision":
+                    addUserPermision(request, response);
+                    break;
+                case "test-without-tran":
+                    testWithoutTran(request, response);
+                    break;
+                case "test-use-tran":
+                    testUseTran(request, response);
+                    break;
                 default:
                     listUser(request, response);
                     break;
@@ -87,7 +96,7 @@ public class UserServlet extends HttpServlet {
     private void showEditForm(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        User existingUser = user.selectUser(id);
+        User existingUser = user.getUserById(id);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/edit.jsp");
         request.setAttribute("user", existingUser);
         dispatcher.forward(request, response);
@@ -100,7 +109,7 @@ public class UserServlet extends HttpServlet {
         String email = request.getParameter("email");
         String country = request.getParameter("country");
         User newUser = new User(name, email, country);
-        user.insertUser(newUser);
+        user.insertUserStore(newUser);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/create.jsp");
         dispatcher.forward(request, response);
     }
@@ -144,5 +153,19 @@ public class UserServlet extends HttpServlet {
         request.setAttribute("listUser", listUser);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/search.jsp");
         dispatcher.forward(request, response);
+    }
+
+    private void addUserPermision(HttpServletRequest request, HttpServletResponse response) {
+        User userNew = new User("quan", "quan.nguyen@codegym.vn", "vn");
+        int[] permision = {1, 2, 4};
+        user.addUserTransaction(userNew, permision);
+    }
+
+    private void testWithoutTran(HttpServletRequest request, HttpServletResponse response) {
+        user.insertUpdateWithoutTransaction();
+    }
+
+    private void testUseTran(HttpServletRequest request, HttpServletResponse response) {
+        user.insertUpdateUseTransaction();
     }
 }
