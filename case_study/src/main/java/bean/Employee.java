@@ -1,159 +1,129 @@
 package bean;
 
+import java.util.Date;
+
 public class Employee {
-    private int id;
-    private String name;
-    private String birthDate;
-    private String gender;
-    private String idCard;
-    private Double salary;
-    private String phone;
-    private String email;
-    private String address;
-    private String position;
-    private String educationDegree;
-    private String division;
-    private String username;
+    private String employeeId;
+    private String employeeName;
+    private Date employeeBirthday;
+    private String employeeIdCard;
+    private double employeeSalary;
+    private String employeePhone;
+    private String employeeEmail;
+    private String employeeAddress;
+    private Position position;
+    private EducationDegree educationDegree;
+    private Division division;
+    private User user;
 
-    public Employee() {
-    }
-
-    public Employee(int id, String name, String birthDate, String gender, String idCard, Double salary, String phone, String email, String address, String position, String educationDegree, String division, String username) {
-        this.id = id;
-        this.name = name;
-        this.birthDate = birthDate;
-        this.gender = gender;
-        this.idCard = idCard;
-        this.salary = salary;
-        this.phone = phone;
-        this.email = email;
-        this.address = address;
+    public Employee(String employeeId, String employeeName, Date employeeBirthday, String employeeIdCard, double employeeSalary, String employeePhone, String employeeEmail, String employeeAddress, Position position, EducationDegree educationDegree, Division division, User user) {
+        this.employeeId = employeeId;
+        this.employeeName = employeeName;
+        this.employeeBirthday = employeeBirthday;
+        this.employeeIdCard = employeeIdCard;
+        this.employeeSalary = employeeSalary;
+        this.employeePhone = employeePhone;
+        this.employeeEmail = employeeEmail;
+        this.employeeAddress = employeeAddress;
         this.position = position;
         this.educationDegree = educationDegree;
         this.division = division;
-        this.username = username;
+        this.user = user;
     }
 
-    public int getId() {
-        return id;
+    public String getEmployeeId() {
+        return employeeId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
     }
 
-    public String getName() {
-        return name;
+    public String getEmployeeName() {
+        return employeeName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName;
     }
 
-    public String getBirthDate() {
-        return birthDate;
+    public Date getEmployeeBirthday() {
+        return employeeBirthday;
     }
 
-    public void setBirthDate(String birthDate) {
-        this.birthDate = birthDate;
+    public void setEmployeeBirthday(Date employeeBirthday) {
+        this.employeeBirthday = employeeBirthday;
     }
 
-    public String getGender() {
-        return gender;
+    public String getEmployeeIdCard() {
+        return employeeIdCard;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setEmployeeIdCard(String employeeIdCard) {
+        this.employeeIdCard = employeeIdCard;
     }
 
-    public String getIdCard() {
-        return idCard;
+    public double getEmployeeSalary() {
+        return employeeSalary;
     }
 
-    public void setIdCard(String idCard) {
-        this.idCard = idCard;
+    public void setEmployeeSalary(double employeeSalary) {
+        this.employeeSalary = employeeSalary;
     }
 
-    public Double getSalary() {
-        return salary;
+    public String getEmployeePhone() {
+        return employeePhone;
     }
 
-    public void setSalary(Double salary) {
-        this.salary = salary;
+    public void setEmployeePhone(String employeePhone) {
+        this.employeePhone = employeePhone;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getEmployeeEmail() {
+        return employeeEmail;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setEmployeeEmail(String employeeEmail) {
+        this.employeeEmail = employeeEmail;
     }
 
-    public String getEmail() {
-        return email;
+    public String getEmployeeAddress() {
+        return employeeAddress;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmployeeAddress(String employeeAddress) {
+        this.employeeAddress = employeeAddress;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPosition() {
+    public Position getPosition() {
         return position;
     }
 
-    public void setPosition(String position) {
+    public void setPosition(Position position) {
         this.position = position;
     }
 
-    public String getEducationDegree() {
+    public EducationDegree getEducationDegree() {
         return educationDegree;
     }
 
-    public void setEducationDegree(String educationDegree) {
+    public void setEducationDegree(EducationDegree educationDegree) {
         this.educationDegree = educationDegree;
     }
 
-    public String getDivision() {
+    public Division getDivision() {
         return division;
     }
 
-    public void setDivision(String division) {
+    public void setDivision(Division division) {
         this.division = division;
     }
 
-    public String getUsername() {
-        return username;
+    public User getUser() {
+        return user;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", birthDate='" + birthDate + '\'' +
-                ", gender='" + gender + '\'' +
-                ", idCard='" + idCard + '\'' +
-                ", salary=" + salary +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", address='" + address + '\'' +
-                ", position='" + position + '\'' +
-                ", educationDegree='" + educationDegree + '\'' +
-                ", division='" + division + '\'' +
-                ", username='" + username + '\'' +
-                '}';
+    public void setUser(User user) {
+        this.user = user;
     }
 }

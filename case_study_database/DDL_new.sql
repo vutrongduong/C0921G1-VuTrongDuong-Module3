@@ -103,7 +103,7 @@ CREATE TABLE attach_service (
 	attach_service_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     attach_service_name VARCHAR(45),
     attach_service_cost DOUBLE,
-    attach_service_unit INT,
+    attach_service_unit varchar(45),
     attach_service_status VARCHAR(45)
 );
 

@@ -1,115 +1,125 @@
 package bean;
 
+import java.util.Date;
+
 public class Customer {
-    private int id;
-    private int type;
-    private String name;
-    private String birthDate;
-    private String gender;
-    private String idCard;
-    private String phone;
-    private String email;
-    private String address;
+    private int customerId;
+    private CustomerType customerType;
+    private String customerName;
+    private Date customerBirthday;
+    private String customerGender;
+    private String customerIdCard;
+    private String customerPhone;
+    private String customerEmail;
+    private String customerAddress;
 
-    public Customer() {
+    public Customer(CustomerType customerType, String customerName, Date customerBirthday, String customerGender, String customerIdCard, String customerPhone, String customerEmail, String customerAddress) {
+        this.customerType = customerType;
+        this.customerName = customerName;
+        this.customerBirthday = customerBirthday;
+        this.customerGender = customerGender;
+        this.customerIdCard = customerIdCard;
+        this.customerPhone = customerPhone;
+        this.customerEmail = customerEmail;
+        this.customerAddress = customerAddress;
     }
 
-    public Customer(int id, int type, String name, String birthDate, String gender, String idCard, String phone, String email, String address) {
-        this.id = id;
-        this.type = type;
-        this.name = name;
-        this.birthDate = birthDate;
-        this.gender = gender;
-        this.idCard = idCard;
-        this.phone = phone;
-        this.email = email;
-        this.address = address;
+    public Customer(int customerId, CustomerType customerType, String customerName, Date customerBirthday, String customerGender, String customerIdCard, String customerPhone, String customerEmail, String customerAddress) {
+        this.customerId = customerId;
+        this.customerType = customerType;
+        this.customerName = customerName;
+        this.customerBirthday = customerBirthday;
+        this.customerGender = customerGender;
+        this.customerIdCard = customerIdCard;
+        this.customerPhone = customerPhone;
+        this.customerEmail = customerEmail;
+        this.customerAddress = customerAddress;
     }
 
-    public int getId() {
-        return id;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
-    public int getTypeId() {
-        return type;
+    public CustomerType getCustomerType() {
+        return customerType;
     }
 
-    public void setTypeId(int typeId) {
-        this.type = typeId;
+    public void setCustomerType(CustomerType customerType) {
+        this.customerType = customerType;
     }
 
-    public String getName() {
-        return name;
+    public String getCustomerName() {
+        return customerName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 
-    public String getBirthDate() {
-        return birthDate;
+    public Date getCustomerBirthday() {
+        return customerBirthday;
     }
 
-    public void setBirthDate(String birthDate) {
-        this.birthDate = birthDate;
+    public void setCustomerBirthday(Date customerBirthday) {
+        this.customerBirthday = customerBirthday;
     }
 
-    public String getGender() {
-        return gender;
+    public String getCustomerGender() {
+        return customerGender;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setCustomerGender(String customerGender) {
+        this.customerGender = customerGender;
     }
 
-    public String getIdCard() {
-        return idCard;
+    public String getCustomerIdCard() {
+        return customerIdCard;
     }
 
-    public void setIdCard(String idCard) {
-        this.idCard = idCard;
+    public void setCustomerIdCard(String customerIdCard) {
+        this.customerIdCard = customerIdCard;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getCustomerPhone() {
+        return customerPhone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setCustomerPhone(String customerPhone) {
+        this.customerPhone = customerPhone;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCustomerEmail() {
+        return customerEmail;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCustomerEmail(String customerEmail) {
+        this.customerEmail = customerEmail;
     }
 
-    public String getAddress() {
-        return address;
+    public String getCustomerAddress() {
+        return customerAddress;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setCustomerAddress(String customerAddress) {
+        this.customerAddress = customerAddress;
     }
 
     @Override
     public String toString() {
         return "Customer{" +
-                "id=" + id +
-                ", typeId=" + type +
-                ", name='" + name + '\'' +
-                ", birthDate='" + birthDate + '\'' +
-                ", gender='" + gender + '\'' +
-                ", idCard='" + idCard + '\'' +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", address='" + address + '\'' +
+                "customerId=" + customerId +
+                ", customerType=" + customerType +
+                ", customerName='" + customerName + '\'' +
+                ", customerBirthday=" + customerBirthday +
+                ", customerGender='" + customerGender + '\'' +
+                ", customerIdCard='" + customerIdCard + '\'' +
+                ", customerPhone='" + customerPhone + '\'' +
+                ", customerEmail='" + customerEmail + '\'' +
+                ", customerAddress='" + customerAddress + '\'' +
                 '}';
     }
 }

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="be378741-bff9-432e-8033-147ae9bff17a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/bean/AttachService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/bean/CustomerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/bean/Division.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/bean/EducationDegree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/bean/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/bean/RentType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/bean/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/bean/ServiceType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/bean/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/src/main/java/repository/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/main/java/bean/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/src/main/java/bean/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/main/java/bean/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/src/main/java/bean/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/main/java/bean/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/src/main/java/bean/Service.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="22quZQa4FgmZXcmNw17HfxmU2EJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ss12_jdbc_va_crud_ss13_ jdbc_querying_va_transaction" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\codegym\C0921G1-VuTrongDuong-Module3\ss12_jdbc_va_crud\src\main\webapp" />
+      <recent name="D:\codegym\C0921G1-VuTrongDuong-Module3\ss12_jdbc_va_crud\src\main\webapp\bai_tap\user" />
+      <recent name="D:\codegym\C0921G1-VuTrongDuong-Module3\ss12_jdbc_va_crud\src\main\webapp\thuc_hanh" />
+      <recent name="D:\codegym\C0921G1-VuTrongDuong-Module3\ss12_jdbc_va_crud\src\main\webapp\user" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\codegym\C0921G1-VuTrongDuong-Module3\ss12_jdbc_va_crud\src\main\webapp\bai_tap" />
+      <recent name="D:\codegym\C0921G1-VuTrongDuong-Module3\ss12_jdbc_va_crud\src\main\java\bai_tap" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.56">
+    <configuration name="UserDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="repository.impl.UserDAO" />
+      <module name="ss12_jdbc_va_crud.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repository.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.56" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.56" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Gradle : org.example : ss12_jdbc_va_crud-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_ss12_jdbc_va_crud" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="60837" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : org.example : ss12_jdbc_va_crud-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.UserDAO" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be378741-bff9-432e-8033-147ae9bff17a" name="Default Changelist" comment="" />
+      <created>1640577493968</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640577493968</updated>
+      <workItem from="1640577498440" duration="621000" />
+      <workItem from="1640578158438" duration="2188000" />
+      <workItem from="1640580487303" duration="182000" />
+      <workItem from="1640586896747" duration="7645000" />
+      <workItem from="1640599564787" duration="473000" />
+      <workItem from="1640612516818" duration="33000" />
+      <workItem from="1640672865342" duration="369000" />
+      <workItem from="1640675013754" duration="12000" />
+      <workItem from="1640675073359" duration="26000" />
+      <workItem from="1640675666607" duration="19000" />
+      <workItem from="1640675854340" duration="173000" />
+      <workItem from="1640681640386" duration="960000" />
+      <workItem from="1640682691429" duration="1075000" />
+      <workItem from="1640708404741" duration="1657000" />
+      <workItem from="1640740979511" duration="41000" />
+      <workItem from="1640749987174" duration="456000" />
+      <workItem from="1640750465605" duration="5143000" />
+      <workItem from="1640759661659" duration="160000" />
+      <workItem from="1640760626533" duration="54000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1640578049380">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1640578049380" />
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1640709819786">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1640709819786" />
+    <state x="386" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1640594553054">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="386" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1640594553054" />
+    <state x="566" y="294" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1640594479809">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="566" y="294" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824@0.0.1536.824" timestamp="1640594479809" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1640760679632">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1640760679632" />
+    <state width="1014" height="439" key="GridCell.Tab.0.bottom" timestamp="1640756235136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1014" height="439" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1640756235136" />
+    <state width="1014" height="439" key="GridCell.Tab.0.center" timestamp="1640756235136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1014" height="439" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1640756235136" />
+    <state width="1014" height="439" key="GridCell.Tab.0.left" timestamp="1640756235136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1014" height="439" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1640756235136" />
+    <state width="1014" height="439" key="GridCell.Tab.0.right" timestamp="1640756235136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1014" height="439" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1640756235136" />
+    <state width="1014" height="439" key="GridCell.Tab.1.bottom" timestamp="1640756235136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1014" height="439" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1640756235136" />
+    <state width="1014" height="439" key="GridCell.Tab.1.center" timestamp="1640756235136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1014" height="439" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1640756235136" />
+    <state width="1014" height="439" key="GridCell.Tab.1.left" timestamp="1640756235136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1014" height="439" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1640756235136" />
+    <state width="1014" height="439" key="GridCell.Tab.1.right" timestamp="1640756235136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1014" height="439" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1640756235136" />
+    <state width="1014" height="439" key="GridCell.Tab.2.bottom" timestamp="1640756235136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1014" height="439" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1640756235136" />
+    <state width="1014" height="439" key="GridCell.Tab.2.center" timestamp="1640756235136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1014" height="439" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1640756235136" />
+    <state width="1014" height="439" key="GridCell.Tab.2.left" timestamp="1640756235136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1014" height="439" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1640756235136" />
+    <state width="1014" height="439" key="GridCell.Tab.2.right" timestamp="1640756235136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1014" height="439" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1640756235136" />
+    <state width="1014" height="207" key="GridCell.Tab.3.bottom" timestamp="1640591832421">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1014" height="207" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1640591832421" />
+    <state width="1014" height="207" key="GridCell.Tab.3.center" timestamp="1640591832421">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1014" height="207" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1640591832421" />
+    <state width="1014" height="207" key="GridCell.Tab.3.left" timestamp="1640591832421">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1014" height="207" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1640591832421" />
+    <state width="1014" height="207" key="GridCell.Tab.3.right" timestamp="1640591832421">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1014" height="207" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1640591832421" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/thuc_hanh/repository/impl/UserDAO.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

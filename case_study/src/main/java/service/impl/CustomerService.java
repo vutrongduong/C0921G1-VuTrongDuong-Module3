@@ -18,6 +18,14 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public List<Customer> display() {
-        return customerRepository.display();
+        List<Customer> customerList = customerRepository.display();
+        for (Customer customer : customerList) {
+            if (customer.getCustomerGender().equals("1")) {
+                customer.setCustomerGender("Nam");
+            } else {
+                customer.setCustomerGender("Nữ");
+            }
+        }
+        return customerList;
     }
 }

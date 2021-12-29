@@ -1,89 +1,86 @@
 package bean;
 
 public class Service {
-    private int id;
-    private String name;
-    private int area;
-    private double cost;
-    private int maxPeople;
-    private int rentType;
-    private int type;
+    private String serviceId;
+    private String serviceName;
+    private int serviceArea;
+    private double serviceCost;
+    private int serviceMaxPeople;
+    private RentType rentType;
+    private ServiceType serviceType;
     private String standardRoom;
     private String descriptionOtherConvenience;
     private double poolArea;
     private int numberOfFloors;
 
-    public Service() {
-    }
-
-    public Service(int id, String name, int area, double cost, int maxPeople, int rentType, int type, String standardRoom, String descriptionOtherConvenience, double poolArea, int numberOfFloors) {
-        this.id = id;
-        this.name = name;
-        this.area = area;
-        this.cost = cost;
-        this.maxPeople = maxPeople;
+    public Service(String serviceId, String serviceName, int serviceArea, double serviceCost, int serviceMaxPeople, RentType rentType, ServiceType serviceType, String standardRoom, String descriptionOtherConvenience, double poolArea, int numberOfFloors) {
+        this.serviceId = serviceId;
+        this.serviceName = serviceName;
+        this.serviceArea = serviceArea;
+        this.serviceCost = serviceCost;
+        this.serviceMaxPeople = serviceMaxPeople;
         this.rentType = rentType;
-        this.type = type;
+        this.serviceType = serviceType;
         this.standardRoom = standardRoom;
         this.descriptionOtherConvenience = descriptionOtherConvenience;
         this.poolArea = poolArea;
         this.numberOfFloors = numberOfFloors;
     }
 
-    public int getId() {
-        return id;
+    public String getServiceId() {
+        return serviceId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setServiceId(String serviceId) {
+        this.serviceId = serviceId;
     }
 
-    public String getName() {
-        return name;
+    public String getServiceName() {
+        return serviceName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
     }
 
-    public int getArea() {
-        return area;
+    public int getServiceArea() {
+        return serviceArea;
     }
 
-    public void setArea(int area) {
-        this.area = area;
+    public void setServiceArea(int serviceArea) {
+        this.serviceArea = serviceArea;
     }
 
-    public double getCost() {
-        return cost;
+    public double getServiceCost() {
+        return serviceCost;
     }
 
-    public void setCost(double cost) {
-        this.cost = cost;
+    public void setServiceCost(double serviceCost) {
+        this.serviceCost = serviceCost;
     }
 
-    public int getMaxPeople() {
-        return maxPeople;
+    public int getServiceMaxPeople() {
+        return serviceMaxPeople;
     }
 
-    public void setMaxPeople(int maxPeople) {
-        this.maxPeople = maxPeople;
+    public void setServiceMaxPeople(int serviceMaxPeople) {
+        this.serviceMaxPeople = serviceMaxPeople;
     }
 
-    public int getRentTypeId() {
+    public RentType getRentType() {
         return rentType;
     }
 
-    public void setRentTypeId(int rentTypeId) {
-        this.rentType = rentTypeId;
+    public void setRentType(RentType rentType) {
+        this.rentType = rentType;
     }
 
-    public int getTypeId() {
-        return type;
+    public ServiceType getServiceType() {
+        return serviceType;
     }
 
-    public void setTypeId(int typeId) {
-        this.type = typeId;
+    public void setServiceType(ServiceType serviceType) {
+        this.serviceType = serviceType;
     }
 
     public String getStandardRoom() {
@@ -116,22 +113,5 @@ public class Service {
 
     public void setNumberOfFloors(int numberOfFloors) {
         this.numberOfFloors = numberOfFloors;
-    }
-
-    @Override
-    public String toString() {
-        return "Service{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", area=" + area +
-                ", cost=" + cost +
-                ", maxPeople=" + maxPeople +
-                ", rentTypeId=" + rentType +
-                ", typeId=" + type +
-                ", standardRoom='" + standardRoom + '\'' +
-                ", descriptionOtherConvenience='" + descriptionOtherConvenience + '\'' +
-                ", poolArea=" + poolArea +
-                ", numberOfFloors=" + numberOfFloors +
-                '}';
     }
 }

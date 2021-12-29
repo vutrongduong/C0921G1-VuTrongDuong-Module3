@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 @WebServlet(name = "CustomerServlet", urlPatterns = "/customer")
 public class CustomerServlet extends HttpServlet {
@@ -39,6 +40,6 @@ public class CustomerServlet extends HttpServlet {
             throws SQLException, IOException, ServletException {
         List<Customer> customerList = customerService.display();
         request.setAttribute("listCustomer", customerList);
-        request.getRequestDispatcher("customer/edit.jsp").forward(request, response);
+        request.getRequestDispatcher("customer/list.jsp").forward(request, response);
     }
 }
