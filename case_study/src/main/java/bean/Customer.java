@@ -6,7 +6,7 @@ public class Customer {
     private String name;
     private String birthDate;
     private String gender;
-    private  String idCard;
+    private String idCard;
     private String phone;
     private String email;
     private String address;

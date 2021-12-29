@@ -1,21 +1,27 @@
 package bean;
 
 public class Contract {
-    int id;
-    String startDate;
-    String endDate;
-    double deposit;
-    double totalMoney;
+    private int id;
+    private String startDate;
+    private String endDate;
+    private double deposit;
+    private double totalMoney;
+    private int employee;
+    private int customer;
+    private int service;
 
     public Contract() {
     }
 
-    public Contract(int id, String startDate, String endDate, double deposit, double totalMoney) {
+    public Contract(int id, String startDate, String endDate, double deposit, double totalMoney, int employee, int customer, int service) {
         this.id = id;
         this.startDate = startDate;
         this.endDate = endDate;
         this.deposit = deposit;
         this.totalMoney = totalMoney;
+        this.employee = employee;
+        this.customer = customer;
+        this.service = service;
     }
 
     public int getId() {
@@ -58,6 +64,30 @@ public class Contract {
         this.totalMoney = totalMoney;
     }
 
+    public int getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(int employee) {
+        this.employee = employee;
+    }
+
+    public int getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(int customer) {
+        this.customer = customer;
+    }
+
+    public int getService() {
+        return service;
+    }
+
+    public void setService(int service) {
+        this.service = service;
+    }
+
     @Override
     public String toString() {
         return "Contract{" +
@@ -66,6 +96,9 @@ public class Contract {
                 ", endDate='" + endDate + '\'' +
                 ", deposit=" + deposit +
                 ", totalMoney=" + totalMoney +
+                ", employee=" + employee +
+                ", customer=" + customer +
+                ", service=" + service +
                 '}';
     }
 }

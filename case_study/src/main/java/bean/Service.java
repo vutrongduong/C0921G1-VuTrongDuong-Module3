@@ -1,29 +1,29 @@
 package bean;
 
 public class Service {
-    int id;
-    String name;
-    int area;
-    double cost;
-    int maxPeople;
-    int rentTypeId;
-    int typeId;
-    String standardRoom;
-    String descriptionOtherConvenience;
-    double poolArea;
-    int numberOfFloors;
+    private int id;
+    private String name;
+    private int area;
+    private double cost;
+    private int maxPeople;
+    private int rentType;
+    private int type;
+    private String standardRoom;
+    private String descriptionOtherConvenience;
+    private double poolArea;
+    private int numberOfFloors;
 
     public Service() {
     }
 
-    public Service(int id, String name, int area, double cost, int maxPeople, int rentTypeId, int typeId, String standardRoom, String descriptionOtherConvenience, double poolArea, int numberOfFloors) {
+    public Service(int id, String name, int area, double cost, int maxPeople, int rentType, int type, String standardRoom, String descriptionOtherConvenience, double poolArea, int numberOfFloors) {
         this.id = id;
         this.name = name;
         this.area = area;
         this.cost = cost;
         this.maxPeople = maxPeople;
-        this.rentTypeId = rentTypeId;
-        this.typeId = typeId;
+        this.rentType = rentType;
+        this.type = type;
         this.standardRoom = standardRoom;
         this.descriptionOtherConvenience = descriptionOtherConvenience;
         this.poolArea = poolArea;
@@ -71,19 +71,19 @@ public class Service {
     }
 
     public int getRentTypeId() {
-        return rentTypeId;
+        return rentType;
     }
 
     public void setRentTypeId(int rentTypeId) {
-        this.rentTypeId = rentTypeId;
+        this.rentType = rentTypeId;
     }
 
     public int getTypeId() {
-        return typeId;
+        return type;
     }
 
     public void setTypeId(int typeId) {
-        this.typeId = typeId;
+        this.type = typeId;
     }
 
     public String getStandardRoom() {
@@ -126,8 +126,8 @@ public class Service {
                 ", area=" + area +
                 ", cost=" + cost +
                 ", maxPeople=" + maxPeople +
-                ", rentTypeId=" + rentTypeId +
-                ", typeId=" + typeId +
+                ", rentTypeId=" + rentType +
+                ", typeId=" + type +
                 ", standardRoom='" + standardRoom + '\'' +
                 ", descriptionOtherConvenience='" + descriptionOtherConvenience + '\'' +
                 ", poolArea=" + poolArea +

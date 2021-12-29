@@ -6,19 +6,19 @@ public class Employee {
     private String birthDate;
     private String gender;
     private String idCard;
-    Double salary;
+    private Double salary;
     private String phone;
     private String email;
     private String address;
-    int position;
-    int educationDegree;
-    int division;
-    String username;
+    private String position;
+    private String educationDegree;
+    private String division;
+    private String username;
 
     public Employee() {
     }
 
-    public Employee(int id, String name, String birthDate, String gender, String idCard, Double salary, String phone, String email, String address, int position, int educationDegree, int division, String username) {
+    public Employee(int id, String name, String birthDate, String gender, String idCard, Double salary, String phone, String email, String address, String position, String educationDegree, String division, String username) {
         this.id = id;
         this.name = name;
         this.birthDate = birthDate;
@@ -106,28 +106,28 @@ public class Employee {
         this.address = address;
     }
 
-    public int getPositionId() {
+    public String getPosition() {
         return position;
     }
 
-    public void setPositionId(int positionId) {
-        this.position = positionId;
+    public void setPosition(String position) {
+        this.position = position;
     }
 
-    public int getEducationDegreeId() {
+    public String getEducationDegree() {
         return educationDegree;
     }
 
-    public void setEducationDegreeId(int educationDegreeId) {
-        this.educationDegree = educationDegreeId;
+    public void setEducationDegree(String educationDegree) {
+        this.educationDegree = educationDegree;
     }
 
-    public int getDivisionId() {
+    public String getDivision() {
         return division;
     }
 
-    public void setDivisionId(int divisionId) {
-        this.division = divisionId;
+    public void setDivision(String division) {
+        this.division = division;
     }
 
     public String getUsername() {
@@ -150,9 +150,9 @@ public class Employee {
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +
-                ", positionId=" + position +
-                ", educationDegreeId=" + educationDegree +
-                ", divisionId=" + division +
+                ", position='" + position + '\'' +
+                ", educationDegree='" + educationDegree + '\'' +
+                ", division='" + division + '\'' +
                 ", username='" + username + '\'' +
                 '}';
     }
