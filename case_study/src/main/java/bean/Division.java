@@ -4,8 +4,8 @@ public class Division {
     private int divisionId;
     private String divisionName;
 
-    public Division(String divisionName) {
-        this.divisionName = divisionName;
+    public Division(int divisionId) {
+        this.divisionId = divisionId;
     }
 
     public Division(int divisionId, String divisionName) {

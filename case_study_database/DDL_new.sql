@@ -128,3 +128,4 @@ CREATE TABLE contract_detail (
     FOREIGN KEY (attach_service_id) REFERENCES attach_service (attach_service_id),
     quantity INT
 );
+alter table customer add flag int;

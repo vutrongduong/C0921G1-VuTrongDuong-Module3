@@ -11,6 +11,12 @@ product_amuont int,
 product_description varchar(45),
 product_status varchar(45)
 );
+create table login(
+`user` varchar(45) primary key,
+pass varchar(45)
+);
+SELECT * FROM login where `user`='admin' and pass='admin';
+insert into login values('admin','admin');
 -- Chèn một số dữ liệu mẫu cho bảng Products.
 insert into products values(1,'KR','Iphone 13',1200,10,'black','100%'),
 (2,'US','Iphone 12',1000,20,'white','99%'),

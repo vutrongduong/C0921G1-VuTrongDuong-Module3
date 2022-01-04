@@ -4,8 +4,8 @@ public class Position {
     private int positionId;
     private String positionName;
 
-    public Position(String positionName) {
-        this.positionName = positionName;
+    public Position(int positionId) {
+        this.positionId = positionId;
     }
 
     public Position(int positionId, String positionName) {

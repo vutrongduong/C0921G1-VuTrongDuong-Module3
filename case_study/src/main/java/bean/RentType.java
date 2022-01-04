@@ -16,6 +16,10 @@ public class RentType {
         this.rentTypeCost = rentTypeCost;
     }
 
+    public RentType(int rentTypeId) {
+        this.rentTypeId = rentTypeId;
+    }
+
     public int getRentTypeId() {
         return rentTypeId;
     }
@@ -38,5 +42,14 @@ public class RentType {
 
     public void setRentTypeCost(double rentTypeCost) {
         this.rentTypeCost = rentTypeCost;
+    }
+
+    @Override
+    public String toString() {
+        return "RentType{" +
+                "rentTypeId=" + rentTypeId +
+                ", rentTypeName='" + rentTypeName + '\'' +
+                ", rentTypeCost=" + rentTypeCost +
+                '}';
     }
 }

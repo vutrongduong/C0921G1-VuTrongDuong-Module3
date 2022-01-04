@@ -4,8 +4,8 @@ public class EducationDegree {
     private int educationDegreeId;
     private String educationDegreeName;
 
-    public EducationDegree(String educationDegreeName) {
-        this.educationDegreeName = educationDegreeName;
+    public EducationDegree(int educationDegreeId) {
+        this.educationDegreeId = educationDegreeId;
     }
 
     public EducationDegree(int educationDegreeId, String educationDegreeName) {

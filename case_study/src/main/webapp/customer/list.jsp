@@ -5,11 +5,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -19,6 +17,19 @@
             background: #f5f5f5;
             font-family: 'Varela Round', sans-serif;
             font-size: 13px;
+        }
+
+        select {
+            color: black;
+            height: 35px;
+        }
+
+        .col-lg-7 {
+            padding-top: 15px;
+        }
+
+        .col-lg-3 {
+            padding-top: 15px;
         }
 
         .table-wrapper {
@@ -60,11 +71,12 @@
             float: left;
             font-size: 21px;
             margin-right: 5px;
+            margin-top: 3px;
         }
 
         .table-title .btn span {
             float: left;
-            margin-top: 2px;
+            margin-top: 6px;
         }
 
         table.table tr th, table.table tr td {
@@ -133,7 +145,7 @@
 
         .table-title .add-new {
             float: right;
-            height: 30px;
+            height: 39px;
             font-weight: bold;
             font-size: 12px;
             text-shadow: none;
@@ -178,11 +190,38 @@
     <div class="table-wrapper">
         <div class="table-title">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-lg-2">
                     <h2>Manage <b>Customers</b></h2>
                 </div>
-                <div class="col-sm-6">
-                    <a href="#" class="btn btn-success add-new" data-toggle="modal"><i
+                <div class="col-lg-7 mt-5">
+                    <form action="/customer">
+                        <input type="hidden" name="action" value="search">
+                        <input style="color: #0c0c0c;height: 35px" type="text" name="name"
+                               placeholder="Search by name or id">
+                        <select class="form-select mt-3 " required name="type">
+                            <option style="color:black;" selected disabled value="Search type">Search by customer type
+                            </option>
+                            <c:forEach var="customerType" items="${listCustomerType}">
+                                <option style="color: black" value="${customerType.typeId}"><c:out
+                                        value="${customerType.typeName}"/></option>
+                            </c:forEach>
+                        </select>
+                        <input style="color: #0c0c0c;height: 35px" type="text" name="phone"
+                               placeholder="Search by phone">
+                        <button class="btn btn-info" style=" border-radius: 15px">
+                        <span>
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                  class="bi bi-search pt-3" viewBox="0 0 16 16">
+                            <path style="padding-top: 5px"
+                                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                        </span>
+                            <span> Search</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="col-lg-3">
+                    <a href="/customer?action=add" class="btn btn-success add-new" data-toggle="modal"><i
                             class="material-icons">&#xE147;</i>
                         <span>Add New Customer</span></a>
                 </div>
@@ -192,63 +231,64 @@
             <thead>
             <tr>
                 <th>ID</th>
-                <th>Loại khách</th>
-                <th>Họ và tên</th>
-                <th>Ngày sinh</th>
-                <th>Giới tính</th>
-                <th>Số cmnd</th>
-                <th>Số điện thoại</th>
+                <th>Customer Type</th>
+                <th>Name</th>
+                <th>Birthday</th>
+                <th>Gender</th>
+                <th>Id card</th>
+                <th>Phone</th>
                 <th>Email</th>
-                <th>Địa chỉ</th>
+                <th>Address</th>
                 <th>Action</th>
             </tr>
             </thead>
             <tbody>
             <c:forEach var="customer" items="${listCustomer}">
-
-                <tr>
-                    <td><c:out value="${customer.customerId}"/></td>
-                    <td><c:out value="${customer.customerType.customerTypeName}"/></td>
-                    <td><c:out value="${customer.customerName}"/></td>
-                    <td><c:out value="${customer.customerBirthday}"/></td>
-                    <td><c:out value="${customer.customerGender}"/></td>
-                    <td><c:out value="${customer.customerIdCard}"/></td>
-                    <td><c:out value="${customer.customerPhone}"/></td>
-                    <td><c:out value="${customer.customerEmail}"/></td>
-                    <td><c:out value="${customer.customerAddress}"/></td>
-                    <td>
-                        <a class="edit" title="Edit" data-toggle="tooltip"><i
-                                class="material-icons">&#xE254;</i></a>
-                        <a href="#deleteCustomerModal" class="delete" data-toggle="modal"><i class="material-icons"
-                                                                                             data-toggle="tooltip"
-                                                                                             title="Delete">&#xE872;</i></a>
-                    </td>
+                <td><c:out value="${customer.id}"/></td>
+                <td><c:out value="${customer.type.typeName}"/></td>
+                <td><c:out value="${customer.name}"/></td>
+                <td><c:out value="${customer.birthday}"/></td>
+                <td><c:out value="${customer.gender}"/></td>
+                <td><c:out value="${customer.idCard}"/></td>
+                <td><c:out value="${customer.phone}"/></td>
+                <td><c:out value="${customer.email}"/></td>
+                <td><c:out value="${customer.address}"/></td>
+                <td>
+                    <a href="/customer?action=edit&customerId=${customer.id}" class="edit" title="Edit"
+                       data-toggle="tooltip"><i
+                            class="material-icons">&#xE254;</i></a>
+                    <a href="#deleteCustomerModal${customer.id}" data-bs-target="deleteCustomerModal"
+                       class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip"
+                                                             title="Delete">&#xE872;</i></a>
+                </td>
                 </tr>
+                <div id="deleteCustomerModal${customer.id}" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <form>
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Delete Customer</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Bạn có chắc chắn muốn xóa khách hàng này không?</p>
+                                    <p class="text-warning">${customer.name}</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                                    <a class="btn btn-danger" href="/customer?action=delete&customerId=${customer.id}">Delete</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </c:forEach>
             </tbody>
         </table>
     </div>
 </div>
-<div id="deleteCustomerModal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form>
-                <div class="modal-header">
-                    <h4 class="modal-title">Delete Customer</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <p>Bạn có chắc chắn muốn xóa khách hàng này không?</p>
-                    <p class="text-warning"><small>Hành động này không thể được hoàn tác.</small></p>
-                </div>
-                <div class="modal-footer">
-                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                    <input type="submit" class="btn btn-danger" value="Delete">
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+
 <script src="jquery/jquery-3.5.1.min.js"></script>
 <script src="datatables/js/jquery.dataTables.min.js"></script>
 <script src="datatables/js/dataTables.bootstrap4.min.js"></script>

@@ -20,9 +20,9 @@
       <div class="col-lg-9 row float-lg-end">
         <p class="col-lg-2"></p>
         <a class="nav-link col-lg-2" href="#">Home</a>
-        <a class="nav-link col-lg-2" href="#">Employee</a>
+        <a class="nav-link col-lg-2" href="/employee">Employee</a>
         <a class="nav-link col-lg-2" href="/customer">Customer</a>
-        <a class="nav-link col-lg-2" href="#">Service</a>
+        <a class="nav-link col-lg-2" href="/service">Service</a>
         <a class="nav-link col-lg-2" href="#">Contact</a>
       </div>
       <div class="col-lg-3 pt-lg-1">

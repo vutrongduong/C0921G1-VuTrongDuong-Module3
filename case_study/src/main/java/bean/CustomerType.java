@@ -1,39 +1,42 @@
 package bean;
 
 public class CustomerType {
-    private int customerTypeId;
-    private String customerTypeName;
+    private String typeId;
+    private String typeName;
 
-    public CustomerType(String customerTypeName) {
-        this.customerTypeName = customerTypeName;
+    public CustomerType() {
     }
 
-    public CustomerType(int customerTypeId, String customerTypeName) {
-        this.customerTypeId = customerTypeId;
-        this.customerTypeName = customerTypeName;
+    public CustomerType(String typeId) {
+        this.typeId = typeId;
     }
 
-    public int getCustomerTypeId() {
-        return customerTypeId;
+    public CustomerType(String typeId, String typeName) {
+        this.typeId = typeId;
+        this.typeName = typeName;
     }
 
-    public void setCustomerTypeId(int customerTypeId) {
-        this.customerTypeId = customerTypeId;
+    public String getTypeId() {
+        return typeId;
     }
 
-    public String getCustomerTypeName() {
-        return customerTypeName;
+    public void setTypeId(String typeId) {
+        this.typeId = typeId;
     }
 
-    public void setCustomerTypeName(String customerTypeName) {
-        this.customerTypeName = customerTypeName;
+    public String getTypeName() {
+        return typeName;
+    }
+
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
     }
 
     @Override
     public String toString() {
         return "CustomerType{" +
-                "customerTypeId=" + customerTypeId +
-                ", customerTypeName='" + customerTypeName + '\'' +
+                "typeId=" + typeId +
+                ", typeName='" + typeName + '\'' +
                 '}';
     }
 }

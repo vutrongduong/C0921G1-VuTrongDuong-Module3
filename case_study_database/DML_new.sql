@@ -39,17 +39,18 @@ insert into `user` values ('annguyen','123'),
 ('dongnguyen','123'),
 ('hoangtong','123'),
 ('daonguyen','123');
-insert into customer (customer_type_id ,customer_name,customer_birthday,customer_gender,customer_id_card,customer_phone,customer_email,customer_address)
-values (5,'Nguyễn Thị Hào','1970-11-07',0,'643431213','945423362','thihao07@gmail.com','23 Nguyễn Hoàng, Đà Nẵng'),	
-(3,'Phạm Xuân Diệu','1992-08-08',1,'865342123','954333333','xuandieu92@gmail.com','K77/22 Thái Phiên, Quảng Trị'),	
-(1,'Trương Đình Nghệ','1990-02-27',1,'488645199','373213122','nghenhan2702@gmail.com','K323/12 Ông Ích Khiêm, Vinh'),	
-(1,'Dương Văn Quan','1981-07-08',1,'543432111','490039241','duongquan@gmail.com','K453/12 Lê Lợi, Đà Nẵng'),	
-(4,'Hoàng Trần Nhi Nhi','1995-12-09',0,'795453345','312345678','nhinhi123@gmail.com','224 Lý Thái Tổ, Gia Lai'),	
-(4,'Tôn Nữ Mộc Châu','2005-12-06',0,'732434215','988888844','tonnuchau@gmail.com','37 Yên Thế, Đà Nẵng'),	
-(1,'Nguyễn Mỹ Kim','1984-04-08',0,'856453123','912345698','kimcuong84@gmail.com','K123/45 Lê Lợi, Hồ Chí Minh'),	
-(3,'Nguyễn Thị Hào','1999-04-08',0,'965656433','763212345','haohao99@gmail.com','55 Nguyễn Văn Linh, Kon Tum'),	
-(1,'Trần Đại Danh','1994-07-01',1,'432341235','643343433','danhhai99@gmail.com','24 Lý Thường Kiệt, Quảng Ngãi'),	
-(2,'Nguyễn Tâm Đắc','1989-07-01',1,'344343432','987654321','dactam@gmail.com','22 Ngô Quyền, Đà Nẵng');
+insert into customer (customer_type_id ,customer_name,customer_birthday,customer_gender,customer_id_card,customer_phone,customer_email,customer_address,flag)
+values (5,'Nguyễn Thị Hào','1970-11-07',0,'643431213','945423362','thihao07@gmail.com','23 Nguyễn Hoàng, Đà Nẵng',1),	
+(3,'Phạm Xuân Diệu','1992-08-08',1,'865342123','954333333','xuandieu92@gmail.com','K77/22 Thái Phiên, Quảng Trị',1),	
+(1,'Trương Đình Nghệ','1990-02-27',1,'488645199','373213122','nghenhan2702@gmail.com','K323/12 Ông Ích Khiêm, Vinh',1),	
+(1,'Dương Văn Quan','1981-07-08',1,'543432111','490039241','duongquan@gmail.com','K453/12 Lê Lợi, Đà Nẵng',1),	
+(4,'Hoàng Trần Nhi Nhi','1995-12-09',0,'795453345','312345678','nhinhi123@gmail.com','224 Lý Thái Tổ, Gia Lai',1),	
+(4,'Tôn Nữ Mộc Châu','2005-12-06',0,'732434215','988888844','tonnuchau@gmail.com','37 Yên Thế, Đà Nẵng',1),	
+(1,'Nguyễn Mỹ Kim','1984-04-08',0,'856453123','912345698','kimcuong84@gmail.com','K123/45 Lê Lợi, Hồ Chí Minh',1),	
+(3,'Nguyễn Thị Hào','1999-04-08',0,'965656433','763212345','haohao99@gmail.com','55 Nguyễn Văn Linh, Kon Tum',1),	
+(1,'Trần Đại Danh','1994-07-01',1,'432341235','643343433','danhhai99@gmail.com','24 Lý Thường Kiệt, Quảng Ngãi',1),	
+(2,'Nguyễn Tâm Đắc','1989-07-01',1,'344343432','987654321','dactam@gmail.com','22 Ngô Quyền, Đà Nẵng',1);
+
 
 insert into rent_type (rent_type_name,rentcost)
 values
@@ -96,4 +97,24 @@ values
 ('2021-04-12','2021-04-14',0,3000000,10,3,5),
 ('2021-04-25','2021-04-25',0,3000000,2,2,1),
 ('2021-05-25','2021-05-27',0,3000000,7,10,1);
+-- SELECT * FROM customer_type;
+-- insert into customer (customer_type_id ,customer_name,customer_birthday,customer_gender,customer_id_card,customer_phone,customer_email,customer_address)
+-- values (?,?,?,?,?,?,?,?);
+
+-- update customer set flag=0 where customer_id=15;
+-- update customer set customer_type_id=?,customer_name=?,customer_birthday=?,customer_gender=?,customer_id_card=?,customer_phone=?,customer_email=?,customer_address=?
+-- where customer_id=?;
+-- SELECT * FROM customer
+-- WHERE customer_id = 1;
+-- SELECT * FROM customer  join customer_type on customer.customer_type_id=customer_type.customer_type_id where customer_id=1;
+-- SELECT * FROM customer left join customer_type on customer.customer_type_id=customer_type.customer_type_id where flag=1 and (customer_name like null or customer_id=null)
+-- union 
+-- SELECT * FROM customer left join customer_type on customer.customer_type_id=customer_type.customer_type_id where flag=1 and (customer.customer_type_id =null )
+-- union
+-- SELECT * FROM customer  left join customer_type on customer.customer_type_id=customer_type.customer_type_id where flag=1 and (customer_phone like null );
+-- insert into service (service_name, service_area, service_cost, service_max_people , rent_type_id , service_type_id ,  standard_room , description_other_convenience , pool_area , number_of_floors)
+-- values
+-- (?,?,?,?,?,?,?,?,?,?);
+SELECT * FROM service join service_type on service.service_type_id=service_type.service_type_id
+join rent_type on rent_type.rent_type_id= service.rent_type_id;
 
