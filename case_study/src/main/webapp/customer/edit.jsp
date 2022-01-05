@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 </head>
 <style>
@@ -112,9 +113,9 @@
                     <div class="row form-group">
                         <input class="form-control" name="phone" type="text" value="${customer.phone} "></div>
                     <div class="row form-group">
-                        <input class="form-control" name="email" type="text" readonly value="${customer.email} "></div>
+                        <input class="form-control" name="email" type="text"  value="${customer.email} "></div>
                     <div class="row form-group">
-                        <input class="form-control" name="address" type="text" readonly value="${customer.address} ">
+                        <input class="form-control" name="address" type="text"  value="${customer.address} ">
                     </div>
                     <div class="row form-group mt-lg-3">
                         <button type="submit" class="btn btn-primary btn-block confirm-button">Save Customer</button>

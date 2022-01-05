@@ -95,10 +95,10 @@
                     <input class="form-control" name="phone" type="text" value="${employee.phone} ">
                 </div>
                 <div class="row form-group">
-                    <input class="form-control" name="email" type="text" readonly value="${employee.email} ">
+                    <input class="form-control" name="email" type="text"  value="${employee.email} ">
                 </div>
                 <div class="row form-group">
-                    <input class="form-control" name="address" type="text" readonly value="${employee.address} ">
+                    <input class="form-control" name="address" type="text"  value="${employee.address} ">
                 </div>
                 <div class="row form-group">
                     <select class="form-select mt-3" required name="position">

@@ -58,7 +58,7 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public List<Employee> search(String nameSearch, String positionSearch, String phoneSearch) {
-        return employeeRepository.search(nameSearch,phoneSearch,phoneSearch);
+        return employeeRepository.search(nameSearch,positionSearch,phoneSearch);
     }
 
     @Override

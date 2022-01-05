@@ -129,3 +129,4 @@ CREATE TABLE contract_detail (
     quantity INT
 );
 alter table customer add flag int;
+alter table employee add flag int default 1;

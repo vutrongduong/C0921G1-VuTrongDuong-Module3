@@ -52,6 +52,7 @@
             background: #fff;
             box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
             padding: 30px;
+            width: 600px;
         }
 
         .signup-form .form-group row {
@@ -68,6 +69,12 @@
             position: relative;
             top: 1px;
         }
+        .form-control[readonly] {
+            background-color: #e9ecef;
+            opacity: 1;
+            margin-top: 9px;
+        }
+
 
         .signup-form .btn {
             font-size: 16px;
@@ -79,9 +86,11 @@
         }
 
         .col-4 {
+            height: 40px;
             background: #5cd3b4;
             border: none;
             color: black;
+            margin-top: 9px
         }
 
         .signup-form .btn:hover, .signup-form .btn:focus {
@@ -89,7 +98,7 @@
             outline: none !important;
         }
 
-        .signup-form a {
+        .signup-form span {
             color: #5cd3b4;
             text-decoration: underline;
         }
@@ -119,13 +128,13 @@
         <div class="form-group row">
             <label class="col-form-label col-4">Id Customer</label>
             <div class="col-8">
-                <input type="text" readonly class="form-control" name="id" value="${id}" required="required">
+                <input type="text" readonly class="form-control" name="id" value="${id}" ="">
             </div>
         </div>
         <div class="form-group row">
             <label class="col-form-label col-4">Customer Type</label>
             <div class="col-8">
-                <select class="form-select mt-3" required name="customerType">
+                <select class="form-select mt-3"  name="customerType">
                     <option selected disabled value="">Customer Type</option>
                     <c:forEach var="customerType" items="${listCustomerType}">
                         <c:choose>
@@ -147,7 +156,7 @@
             <label class="col-form-label col-4">Name</label>
             <div class="col-8 mt-2">
                 <input value="${customer.name}" class="form-control" type="text" name="name"
-                       required>
+                       >
                 <p style="color:red;">${name}</p>
             </div>
         </div>
@@ -163,7 +172,7 @@
             <label class="col-form-label col-4">Birthday</label>
             <div class="col-8 mt-2">
                 <input value="${customer.birthday}" class="form-control h-75" type="date" name="birthDay"
-                       required>
+                       >
                 <p style="color:red;">${date}</p>
             </div>
         </div>
@@ -171,7 +180,7 @@
             <label class="col-form-label col-4">Id Card</label>
             <div class="col-8 mt-2">
                 <input value="${customer.idCard}" class="form-control" type="text" name="idCard"
-                       required>
+                       >
                 <p style="color:red;">${idCard}</p>
             </div>
         </div>
@@ -179,14 +188,14 @@
             <label class="col-form-label col-4">Phone</label>
             <div class="col-8 mt-2">
                 <input value="${customer.phone}" class="form-control" type="text" name="phone"
-                       required>
+                       >
             </div>
         </div>
         <div class="form-group row">
             <label class="col-form-label col-4">E-mail Address</label>
             <div class="col-8 mt-2">
                 <input value="${customer.email}" class="form-control" type="email" name="email"
-                       required>
+                       >
                 <p style="color:red;">${email}</p>
             </div>
         </div>
@@ -194,15 +203,15 @@
             <label class="col-form-label col-4">Address</label>
             <div class="col-8 mt-2">
                 <input value="${customer.address}" class="form-control" type="text" name="address"
-                       required>
+                       >
                 <p style="color:red;">${address}</p>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-8 offset-4 ">
-                <p><label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms
-                    of Use</a> &amp; <a href="#">Privacy Policy</a>.</label></p>
-                <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+                <p><label class="form-check-label"><input type="checkbox"> I accept the <span>Are
+                    you sure the above information is completely correct?</span></label></p>
+                <button type="submit" class="btn btn-primary btn-lg">Add New Customer</button>
             </div>
         </div>
     </form>

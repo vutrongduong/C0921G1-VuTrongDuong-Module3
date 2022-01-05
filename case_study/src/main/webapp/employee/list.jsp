@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../datatables/css/dataTables.bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
@@ -186,6 +187,7 @@
     </style>
 </head>
 <body>
+
 <div class="container-fluid">
     <div class="table-wrapper">
         <div class="table-title">
@@ -227,76 +229,77 @@
                 </div>
             </div>
         </div>
-        <table id="table" class="table table-striped table-bordered" style="width: 100%">
+        <table id="tableEmployee" class="table table-striped table-bordered" style="width: 100%">
             <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Birthday</th>
-                <th>Id Card</th>
-                <th>Salary</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Address</th>
-                <th>Position</th>
-                <th>EducationDegree</th>
-                <th>Division</th>
-            </tr>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Birthday</th>
+                    <th>Id Card</th>
+                    <th>Salary</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Position</th>
+                    <th>EducationDegree</th>
+                    <th>Division</th>
+                </tr>
             </thead>
             <tbody>
-            <c:forEach var="employee" items="${employeeList}">
-                <td><c:out value="${employee.id}"/></td>
-                <td><c:out value="${employee.name}"/></td>
-                <td><c:out value="${employee.birthday}"/></td>
-                <td><c:out value="${employee.idCard}"/></td>
-                <td><c:out value="${employee.salary}"/></td>
-                <td><c:out value="${employee.phone}"/></td>
-                <td><c:out value="${employee.email}"/></td>
-                <td><c:out value="${employee.address}"/></td>
-                <td><c:out value="${employee.position.positionName}"/></td>
-                <td><c:out value="${employee.educationDegree.educationDegreeName}"/></td>
-                <td><c:out value="${employee.division.divisionName}"/></td>
-                <td>
-                    <a href="/employee?action=edit&employeeId=${employee.id}" class="edit" title="Edit"
-                       data-toggle="tooltip"><i
-                            class="material-icons">&#xE254;</i></a>
-                    <a href="#deleteEmployeeModal${employee.id}" data-bs-target="deleteEmployeeModal"
-                       class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip"
-                                                             title="Delete">&#xE872;</i></a>
-                </td>
-                </tr>
-                <div id="deleteEmployeeModal${employee.id}" class="modal fade">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <form>
-                                <div class="modal-header">
-                                    <h4 class="modal-title">Delete Employee</h4>
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Bạn có chắc chắn muốn xóa nhân viên này không?</p>
-                                    <p class="text-warning">${employee.name}</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                                    <a class="btn btn-danger" href="/employee?action=delete&employeeId=${employee.id}">Delete</a>
-                                </div>
-                            </form>
+                <c:forEach var="employee" items="${employeeList}">
+                    <td><c:out value="${employee.id}"/></td>
+                    <td><c:out value="${employee.name}"/></td>
+                    <td><c:out value="${employee.birthday}"/></td>
+                    <td><c:out value="${employee.idCard}"/></td>
+                    <td><c:out value="${employee.salary}"/></td>
+                    <td><c:out value="${employee.phone}"/></td>
+                    <td><c:out value="${employee.email}"/></td>
+                    <td><c:out value="${employee.address}"/></td>
+                    <td><c:out value="${employee.position.positionName}"/></td>
+                    <td><c:out value="${employee.educationDegree.educationDegreeName}"/></td>
+                    <td><c:out value="${employee.division.divisionName}"/></td>
+                    <td>
+                        <a href="/employee?action=edit&employeeId=${employee.id}" class="edit" title="Edit"
+                           data-toggle="tooltip"><i
+                                class="material-icons">&#xE254;</i></a>
+                        <a href="#deleteEmployeeModal${employee.id}" data-bs-target="deleteEmployeeModal"
+                           class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip"
+                                                                 title="Delete">&#xE872;</i></a>
+                    </td>
+                    </tr>
+                    <div id="deleteEmployeeModal${employee.id}" class="modal fade">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <form>
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Delete Employee</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Bạn có chắc chắn muốn xóa nhân viên này không?</p>
+                                        <p class="text-warning">${employee.name}</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                                        <a class="btn btn-danger" href="/employee?action=delete&employeeId=${employee.id}">Delete</a>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </c:forEach>
+                </c:forEach>
             </tbody>
         </table>
     </div>
 </div>
-<script src="jquery/jquery-3.5.1.min.js"></script>
-<script src="datatables/js/jquery.dataTables.min.js"></script>
-<script src="datatables/js/dataTables.bootstrap4.min.js"></script>
+
+<script src="../jquery/jquery-3.5.1.min.js"></script>
+<script src="../datatables/js/jquery.dataTables.min.js"></script>
+<script src="../datatables/js/dataTables.bootstrap4.min.js"></script>
 <script>
     $(document).ready(function () {
-        $('#table').dataTable({
+        $('#tableEmployee').dataTable({
             "dom": 'lrtip',
             "lengthChange": false,
             "pageLength": 5

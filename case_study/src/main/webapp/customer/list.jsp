@@ -262,24 +262,48 @@
                                                              title="Delete">&#xE872;</i></a>
                 </td>
                 </tr>
-                <div id="deleteCustomerModal${customer.id}" class="modal fade">
+<%--                <div id="deleteCustomerModal${customer.id}" class="modal fade">--%>
+<%--                    <div class="modal-dialog">--%>
+<%--                        <div class="modal-content">--%>
+<%--                            <form>--%>
+<%--                                <div class="modal-header">--%>
+<%--                                    <h4 class="modal-title">Delete Customer</h4>--%>
+<%--                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">--%>
+<%--                                    </button>--%>
+<%--                                </div>--%>
+<%--                                <div class="modal-body">--%>
+<%--                                    <p>Bạn có chắc chắn muốn xóa khách hàng này không?</p>--%>
+<%--                                    <p class="text-warning">${customer.name}</p>--%>
+<%--                                </div>--%>
+<%--                                <div class="modal-footer">--%>
+<%--                                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">--%>
+<%--                                    <a class="btn btn-danger" href="/customer?action=delete&customerId=${customer.id}">Delete</a>--%>
+<%--                                </div>--%>
+<%--                            </form>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--                <button type="button" class="btn btn-primary" data-bs-toggle="modal"--%>
+<%--                        data-bs-target="#deleteCustomerModal${customer.id}">--%>
+<%--                    Launch demo modal--%>
+                </button>
+                <div class="modal fade" id="deleteCustomerModal${customer.id}" tabindex="-1"
+                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <form>
-                                <div class="modal-header">
-                                    <h4 class="modal-title">Delete Customer</h4>
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Bạn có chắc chắn muốn xóa khách hàng này không?</p>
-                                    <p class="text-warning">${customer.name}</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                                    <a class="btn btn-danger" href="/customer?action=delete&customerId=${customer.id}">Delete</a>
-                                </div>
-                            </form>
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Delete Customer</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Bạn có chắc chắn muốn xóa khách hàng này không?</p>
+                                <p class="text-warning">${customer.name}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                                <button href="/customer?action=delete&customerId=${customer.id}" type="button" class="btn btn-danger">Delete</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -288,10 +312,9 @@
         </table>
     </div>
 </div>
-
-<script src="jquery/jquery-3.5.1.min.js"></script>
-<script src="datatables/js/jquery.dataTables.min.js"></script>
-<script src="datatables/js/dataTables.bootstrap4.min.js"></script>
+<script src="../jquery/jquery-3.5.1.min.js"></script>
+<script src="../datatables/js/jquery.dataTables.min.js"></script>
+<script src="../datatables/js/dataTables.bootstrap4.min.js"></script>
 <script>
     $(document).ready(function () {
         $('#table').dataTable({

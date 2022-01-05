@@ -37,6 +37,12 @@
             padding: 30px 0;
         }
 
+        .form-control[readonly] {
+            background-color: #e9ecef;
+            opacity: 1;
+            margin-top: 9px;
+        }
+
         .signup-form h2 {
             color: #333;
             margin: 0 0 30px 0;
@@ -79,9 +85,11 @@
         }
 
         .col-4 {
+            height: 40px;
             background: #5cd3b4;
             border: none;
             color: black;
+            margin-top: 9px
         }
 
         .signup-form .btn:hover, .signup-form .btn:focus {
@@ -89,7 +97,7 @@
             outline: none !important;
         }
 
-        .signup-form a {
+        .signup-form span {
             color: #5cd3b4;
             text-decoration: underline;
         }
@@ -119,7 +127,7 @@
         <div class="form-group row">
             <label class="col-form-label col-4">Id Service</label>
             <div class="col-8">
-                <input type="text" readonly class="form-control" name="id" value="${id}" required="required">
+                <input type="text" readonly class="form-control mb-lg-3" name="id" value="${id}" required="required">
             </div>
         </div>
         <div class="form-group row">
@@ -173,7 +181,7 @@
                         </c:choose>
                     </c:forEach>
                 </select>
-                                <p style="color:red;">${type}</p>
+                <p style="color:red;">${type}</p>
             </div>
         </div>
         <div class="form-group row">
@@ -194,7 +202,7 @@
                         </c:choose>
                     </c:forEach>
                 </select>
-                                <p style="color:red;">${type}</p>
+                <p style="color:red;">${type}</p>
             </div>
         </div>
         <div class="form-group row">
@@ -231,8 +239,8 @@
         </div>
         <div class="form-group row">
             <div class="col-8 offset-4 ">
-                <p><label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Are
-                    you sure the above information is completely correct?</a></label></p>
+                <p><label class="form-check-label"><input type="checkbox" required="required"> I accept the <span>Are
+                    you sure the above information is completely correct?</span></label></p>
                 <button type="submit" class="btn btn-primary btn-lg">Add New Service</button>
             </div>
         </div>
