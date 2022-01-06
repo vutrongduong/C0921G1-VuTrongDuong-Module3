@@ -4,123 +4,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/list.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
 <div class="container">
     <div class="table-wrapper">
         <div class="table-title">
             <div class="row">
-                <div class="col-lg-2">
-                    <h2>Manage <b>Customers</b></h2>
+                <div class="col-lg-6">
+                    <h2>Danh sách <b>bệnh án</b></h2>
                 </div>
-                <div class="col-lg-7 mt-5">
-                    <form action="/customer">
-                        <input type="hidden" name="action" value="search">
-                        <input style="color: #0c0c0c;height: 35px" type="text" name="name"
-                               placeholder="Search by name or id">
-                        <select class="form-select mt-3 " required name="type">
-                            <option style="color:black;" selected disabled value="Search type">Search by customer type
-                            </option>
-                            <c:forEach var="customerType" items="${listCustomerType}">
-                                <option style="color: black" value="${customerType.typeId}"><c:out
-                                        value="${customerType.typeName}"/></option>
-                            </c:forEach>
-                        </select>
-                        <input style="color: #0c0c0c;height: 35px" type="text" name="phone"
-                               placeholder="Search by phone">
-                        <button class="btn btn-info" style=" border-radius: 15px">
-                        <span>
-                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                  class="bi bi-search pt-3" viewBox="0 0 16 16">
-                            <path style="padding-top: 5px"
-                                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                        </svg>
-                        </span>
-                            <span> Search</span>
-                        </button>
-                    </form>
-                </div>
-                <div class="col-lg-3">
-                    <a href="/customer?action=add" class="btn btn-success add-new" data-toggle="modal"><i
+                <div class="col-lg-6">
+                    <a href="/benhAn?action=add" class="btn btn-success add-new" data-toggle="modal"><i
                             class="material-icons">&#xE147;</i>
-                        <span>Add New Customer</span></a>
+                        <span>Thêm bệnh án</span></a>
                 </div>
             </div>
         </div>
-        <table id="table" class="table table-striped table-bordered">
+        <table id="table" class="table table-striped table-bordered" style="width: 100%">
             <thead>
             <tr>
-                <th>ID</th>
-                <th>Customer Type</th>
-                <th>Name</th>
-                <th>Birthday</th>
-                <th>Gender</th>
-                <th>Id card</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Address</th>
-                <th>Action</th>
+                <th>STT</th>
+                <th>Mã bệnh án</th>
+                <th>Mã bệnh nhân</th>
+                <th>Tên bệnh nhân</th>
+                <th>Ngày nhập viện</th>
+                <th>Ngày ra viện</th>
+                <th>Lý do nhập viện</th>
+                <th>Tác vụ</th>
             </tr>
             </thead>
             <tbody>
-            <c:forEach var="customer" items="${listCustomer}">
-                <td><c:out value="${customer.id}"/></td>
-                <td><c:out value="${customer.type.typeName}"/></td>
-                <td><c:out value="${customer.name}"/></td>
-                <td><c:out value="${customer.birthday}"/></td>
-                <td><c:out value="${customer.gender}"/></td>
-                <td><c:out value="${customer.idCard}"/></td>
-                <td><c:out value="${customer.phone}"/></td>
-                <td><c:out value="${customer.email}"/></td>
-                <td><c:out value="${customer.address}"/></td>
+            <c:forEach var="benhAn" items="${benhAnList}" varStatus="count">
+                <td>${count.count}</td>
+                <td><c:out value="${benhAn.id}"/></td>
+                <td><c:out value="${benhAn.benhNhan.id}"/></td>
+                <td><c:out value="${benhAn.benhNhan.ten}"/></td>
+                <td><c:out value="${benhAn.ngayNhapVien}"/></td>
+                <td><c:out value="${benhAn.ngayRaVien}"/></td>
+                <td><c:out value="${benhAn. lyDo}"/></td>
                 <td>
-                    <a href="/customer?action=edit&customerId=${customer.id}" class="edit" title="Edit"
-                       data-toggle="tooltip"><i
-                            class="material-icons">&#xE254;</i></a>
-                    <a href="#deleteCustomerModal${customer.id}" data-bs-target="deleteCustomerModal"
-                       class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip"
-                                                             title="Delete">&#xE872;</i></a>
+                    <a href="/benhAn?action=edit&benhAnId=${benhAn.id}" class="edit" title="Edit"
+                       data-toggle="tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                             viewBox="0 0 16 16">
+                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                            <path fill-rule="evenodd"
+                                  d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                        </svg>
+                    </a>
+                    <a href="#deleteCustomerModal${benhAn.id}" data-bs-toggle="modal" title="Delete"
+                       data-bs-target="#deleteCustomerModal${benhAn.id}" class="delete">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                             class="bi bi-trash-fill" viewBox="0 0 16 16">
+                            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                        </svg>
+                    </a>
                 </td>
                 </tr>
-                <%--                <div id="deleteCustomerModal${customer.id}" class="modal fade">--%>
-                <%--                    <div class="modal-dialog">--%>
-                <%--                        <div class="modal-content">--%>
-                <%--                            <form>--%>
-                <%--                                <div class="modal-header">--%>
-                <%--                                    <h4 class="modal-title">Delete Customer</h4>--%>
-                <%--                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">--%>
-                <%--                                    </button>--%>
-                <%--                                </div>--%>
-                <%--                                <div class="modal-body">--%>
-                <%--                                    <p>Bạn có chắc chắn muốn xóa khách hàng này không?</p>--%>
-                <%--                                    <p class="text-warning">${customer.name}</p>--%>
-                <%--                                </div>--%>
-                <%--                                <div class="modal-footer">--%>
-                <%--                                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">--%>
-                <%--                                    <a class="btn btn-danger" href="/customer?action=delete&customerId=${customer.id}">Delete</a>--%>
-                <%--                                </div>--%>
-                <%--                            </form>--%>
-                <%--                        </div>--%>
-                <%--                    </div>--%>
-                <%--                </div>--%>
-
+                <div class="modal fade" id="deleteCustomerModal${benhAn.id}" tabindex="-1"
+                     aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Delete Customer</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Bạn có muốn xóa thông tin bệnh án <span class="text-warning">${benhAn.id}</span> hay không</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <a class="btn btn-danger" href="/benhAn?action=delete&benhAnId=${benhAn.id}">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </c:forEach>
             </tbody>
         </table>
     </div>
 </div>
-
-<script src="jquery/jquery-3.5.1.min.js"></script>
-<script src="datatables/js/jquery.dataTables.min.js"></script>
-<script src="datatables/js/dataTables.bootstrap4.min.js"></script>
+<script src="../jquery/jquery-3.5.1.min.js"></script>
+<script src="../datatables/js/jquery.dataTables.min.js"></script>
+<script src="../datatables/js/dataTables.bootstrap4.min.js"></script>
 <script>
     $(document).ready(function () {
         $('#table').dataTable({
@@ -130,5 +103,11 @@
         });
     });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
 </body>
 </html>

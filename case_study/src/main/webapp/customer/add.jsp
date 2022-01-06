@@ -128,7 +128,7 @@
         <div class="form-group row">
             <label class="col-form-label col-4">Id Customer</label>
             <div class="col-8">
-                <input type="text" readonly class="form-control" name="id" value="${id}" ="">
+                <input type="text" readonly class="form-control" name="id" value="${id}" >
             </div>
         </div>
         <div class="form-group row">
